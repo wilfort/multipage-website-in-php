@@ -92,7 +92,7 @@
     </section>
     <?php
 
-        include("./assent/vue/footer.php");
+        include("./assets/vue/footer.php");
 
     ?>		
 </body>
