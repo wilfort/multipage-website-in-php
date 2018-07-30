@@ -15,21 +15,14 @@
     require './vendor/autoload.php';
     $mail = new PHPMailer;
     try{
-        $mail->isSMTP();
-
         $mail->SMTPDebug = 2;
-
+        $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
-
-        $mail->Port = 587;
-
-        $mail->SMTPSecure = 'tls';
-
         $mail->SMTPAuth = true;
-
         $mail->Username = "wilfort.stephane@gmail.com";
-
         $mail->Password = "PRli1992";
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
 
         $mail->setFrom('wilfort.stephane@gmail.com', 'Wilfort Stéphane');
 
