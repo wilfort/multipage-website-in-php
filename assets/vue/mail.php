@@ -21,7 +21,7 @@
 
         $mail->Host = 'smtp.gmail.com';
 
-        $mail->Port = 465;
+        $mail->Port = 587;
 
         $mail->SMTPSecure = 'tls';
 
