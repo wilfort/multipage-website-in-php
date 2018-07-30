@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <?php 
-        include("./assent/vue/link.php")
+        include("./assets/vue/link.php")
     ?>
 </head>
 <body>
-<?php
+    <?php
 
-include("header.php");
+    include("header.php");
 
-?>
-<section>
-</section>
-<?php
+    ?>
+    <section>
+    </section>
+    <?php
 
-include("footer.php");
+    include("footer.php");
 
-?>
+    ?>
 </body>
 </html>

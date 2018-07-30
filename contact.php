@@ -38,21 +38,21 @@
                         </div>
 
                         <div class="col-4">
-                            <label for="nom">nom</label>
+                            <label for="nom">Nom</label>
                         </div>
                         <div class="col-8">
                             <input type="text" name="nom" id="nom">
                         </div>
 
                         <div class="col-4">
-                        <label for="prenom">prénon</label>
+                        <label for="prenom">Prénom</label>
                         </div>
                         <div class="col-8">
                         <input type="text" name="prenom" id="prenom">
                         </div>
 
                         <div class="col-4">
-                        <label for="adresse">email</label>
+                        <label for="adresse">Email</label>
                         </div>
                         <div class="col-8">
                         <input type="email" name="adresse" id="adresse">
@@ -76,14 +76,12 @@
                         <div class="col-8">
                             <textarea name="message" id="" cols="30" rows="10"></textarea>
                         </div>
-
                         <!-- <div class="col-4">
-                            <label for="file">documents</label>
+                            <label for="upload">Ajouter une pièce jointe</label>
                         </div>
                         <div class="col-8">
-                            <input type="file" name="" id=""><br>
+                            <input type="file" name="upload" id="upload"><br>
                         </div> -->
-
                         <div class="col-4">
                             <label for="type">titre</label>
                         </div>
@@ -101,7 +99,7 @@
     </section>
     <?php
 
-        include("./assent/vue/footer.php");
+        include("./assets/vue/footer.php");
         print_r($_POST);
     ?>		
 </body>
