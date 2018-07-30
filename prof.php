@@ -10,17 +10,17 @@
     ?>
 </head>
 <body>
-<?php
+    <?php
 
-include("header.php");
+    include("header.php");
 
-?>
-<section>
-</section>
-<?php
+    ?>
+    <section>
+    </section>
+    <?php
 
-include("footer.php");
+    include("footer.php");
 
-?>
+    ?>
 </body>
 </html>

@@ -22,7 +22,7 @@
     ?>
     <section>
         
-                <form action="#" method="post">
+                <form action="#" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-12">
                             <h4>Contact</h4>
@@ -36,29 +36,29 @@
                             <input type="radio" name="gender" id="" value="Mr."> Mr. 
                         </div>
                         <div class="col-4">
-                            <label for="nom">nom</label>
+                            <label for="nom">Nom</label>
                         </div>
                         <div class="col-8">
                             <input type="text" name="nom" id="nom">
                         </div>
                         <div class="col-4">
-                        <label for="prenom">prénon</label>
+                        <label for="prenom">Prénom</label>
                         </div>
                         <div class="col-8">
                         <input type="text" name="prenom" id="prenom">
                         </div>
                         <div class="col-4">
-                        <label for="adresse">email</label>
+                        <label for="adresse">Email</label>
                         </div>
                         <div class="col-8">
                         <input type="email" name="adresse" id="adresse">
                         </div>
                         <div class="col-4">
-                        <label for="objet">titre</label>
+                        <label for="objet">Objet</label>
                         </div>
                         <div class="col-8">
                             <select name="objet" id="">
-                                <option value="info">demande d'informations</option>
+                                <option value="info">Demande d'informations</option>
                                 <!-- <option value=""></option>
                                 <option value=""></option>
                                 <option value=""></option> -->
@@ -71,10 +71,10 @@
                             <textarea name="message" id="" cols="30" rows="10"></textarea>
                         </div>
                         <div class="col-4">
-                            <label for="file">documents</label>
+                            <label for="upload">Ajouter une pièce jointe</label>
                         </div>
                         <div class="col-8">
-                            <input type="file" name="" id=""><br>
+                            <input type="file" name="upload" id="upload"><br>
                         </div>
                         <div class="col-4">
                             <label for="type">titre</label>
