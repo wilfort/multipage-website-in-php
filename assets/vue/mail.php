@@ -14,16 +14,15 @@
     // require 'path/to/PHPMailer/src/SMTP.php';
     require './vendor/autoload.php';
     $mail = new PHPMailer;
-    try{
-        $mail->SMTPDebug = 2;
+    
+        $mail->SMTPDebug = 1;
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
         $mail->Username = "wilfort.stephane@gmail.com";
         $mail->Password = "PRli1992";
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
-
         $mail->setFrom('wilfort.stephane@gmail.com', 'Wilfort Stéphane');
 
         $mail->addAddress($email, $nom." ".$prenom);
@@ -40,9 +39,6 @@
         } else {
             echo "Message sent!";
         }
-    } catch (Exception $e) {
-        echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
-    }
     function save_mail($mail)
     {
         //You can change 'Sent Mail' to any other folder or tag
