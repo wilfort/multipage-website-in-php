@@ -7,6 +7,11 @@
      */
     //Import PHPMailer classes into the global namespace
     use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    // require 'path/to/PHPMailer/src/Exception.php';
+    // require 'path/to/PHPMailer/src/PHPMailer.php';
+    // require 'path/to/PHPMailer/src/SMTP.php';
     require './vendor/autoload.php';
     $mail = new PHPMailer;
     try{
@@ -31,7 +36,7 @@
         $mail->addAddress($email, $nom." ".$prenom);
 
         $mail->Subject = $objet;
-        $mail->addAttachment('./assent/img/logo.png', 'logo.jpg');
+        $mail->addAttachment('./assets/img/logo.png', 'logo.jpg');
 
         $mail->isHTML(true);
         $mail->Body = 'This is a plain-text message body';

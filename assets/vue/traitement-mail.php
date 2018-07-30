@@ -45,6 +45,6 @@
             print_r($errors);
             exit;
         }
-        include("./assent/vue/mail.php");
+        include("./assets/vue/mail.php");
     
     }
