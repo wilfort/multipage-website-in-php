@@ -1,6 +1,7 @@
 <?php
 
-    //include("/assent/vue/traitement-mail.php");
+    //include("/assets/vue/traitement-mail.php");
+    include (".assets/php/upload.php");
 
 ?>
 <!DOCTYPE html>
@@ -9,15 +10,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Contactez-nous</title>
     <?php 
-        include("./assent/vue/link.php")
+        include("./assets/vue/link.php")
     ?>
 </head>
 <body>
     <?php
 
-        include("./assent/vue/header.php");
+        include("./assets/vue/header.php");
     
     ?>
     <section>
