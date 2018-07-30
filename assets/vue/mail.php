@@ -22,8 +22,8 @@
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
         $mail->Username = "wilfort.stephane@gmail.com";
-        $mail->Password = "********";
-        $mail->setFrom('wilfort.stephane@gmail.com', 'Wilfort Stéphane');
+        $mail->Password = "PRli1992";
+        $mail->setFrom('wilfort.stephane@gmail.com', 'Wilfort Stesphane');
 
         $mail->addAddress($email, $nom." ".$prenom);
 
