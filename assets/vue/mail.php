@@ -21,7 +21,7 @@
 
         $mail->Host = 'smtp.gmail.com';
 
-        $mail->Port = 587;
+        $mail->Port = 465;
 
         $mail->SMTPSecure = 'tls';
 
@@ -50,14 +50,14 @@
     } catch (Exception $e) {
         echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
     }
-    // function save_mail($mail)
-    // {
-    //     //You can change 'Sent Mail' to any other folder or tag
-    //     $path = "{imap.gmail.com:993/imap/ssl}[Gmail]/Sent Mail";
-    //     //Tell your server to open an IMAP connection using the same username and password as you used for SMTP
-    //     $imapStream = imap_open($path, $mail->Username, $mail->Password);
-    //     $result = imap_append($imapStream, $path, $mail->getSentMIMEMessage());
-    //     imap_close($imapStream);
-    //     return $result;
-    // }
+    function save_mail($mail)
+    {
+        //You can change 'Sent Mail' to any other folder or tag
+        $path = "{imap.gmail.com:993/imap/ssl}[Gmail]/Sent Mail";
+        //Tell your server to open an IMAP connection using the same username and password as you used for SMTP
+        $imapStream = imap_open($path, $mail->Username, $mail->Password);
+        $result = imap_append($imapStream, $path, $mail->getSentMIMEMessage());
+        imap_close($imapStream);
+        return $result;
+    }
     
