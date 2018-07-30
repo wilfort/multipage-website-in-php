@@ -1,7 +1,7 @@
 <?php
 
     //include("/assets/vue/traitement-mail.php");
-    include (".assets/php/upload.php");
+    include ("/assets/php/upload.php");
 
 ?>
 <!DOCTYPE html>
