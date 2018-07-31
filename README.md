@@ -57,6 +57,16 @@ NB: The email and upload might be done separately by both (then merged or modifi
 
 5. The client 
 
+Tilt asbl is a non-profit that organises various activities for kids (workshops, summercamps, *etc*). They aim to educate critical and involved citizens through activities centered on creation and discovery. They also act as a resource center, working with schools and providing trainings aimed at adults.
+
+Their [current website](https://www.letilt.be/) is well structured for people who already know about the organization and want to find specific information. It is, however, quite big, and not always easy to navigate with 2 navbars on top of the page and some dead links and redundant pages.
+
+6. Log 
+29/07: split tasks. Stéphane started working on phpmailer, Quang on file upload
+30/07: 14:00: upload is complete but the permission issues encountered seem to come up when Stéphane tests it on his end.
+30/07, 15:30: both mailer and upload are complete. Stéphane starts working on header, Quang starts writing the README and combing through the website's content
+
+
 
 
 
