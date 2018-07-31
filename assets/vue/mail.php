@@ -8,21 +8,21 @@
     //Import PHPMailer classes into the global namespace
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
-
+    include('./assets/vue/log.php');
     // require 'path/to/PHPMailer/src/Exception.php';
     // require 'path/to/PHPMailer/src/PHPMailer.php';
     // require 'path/to/PHPMailer/src/SMTP.php';
     require './vendor/autoload.php';
     $mail = new PHPMailer;
-    
-        $mail->SMTPDebug = 1;
+        
+        // $mail->SMTPDebug = 2;
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
-        $mail->Username = "wilfort.stephane@gmail.com";
-        $mail->Password = "PRli1992";
+        $mail->Username = $id;
+        $mail->Password = $password;
         $mail->setFrom('wilfort.stephane@gmail.com', 'Wilfort Stesphane');
 
         $mail->addAddress($email, $nom." ".$prenom);
@@ -31,14 +31,19 @@
         $mail->addAttachment('./assets/img/logo.png', 'logo.jpg');
 
         $mail->isHTML(true);
-        $mail->Body = 'This is a plain-text message body';
-
+        
+        $mail->Body = $message;
+        
         if (!$mail->send()) {
             echo 'Message was not sent.';
             echo "Mailer Error: " . $mail->ErrorInfo;
         } else {
             echo "Message sent!";
         }
+        
+        
+        //...later
+
     function save_mail($mail)
     {
         //You can change 'Sent Mail' to any other folder or tag

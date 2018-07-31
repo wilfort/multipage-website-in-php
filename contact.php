@@ -40,24 +40,30 @@
                         <div class="col-4">
                             <label for="nom">Nom</label>
                         </div>
-                        <div class="col-8">
-                            <input type="text" name="nom" id="nom">
+                        <div class="col-4">
+                            <input type="text" name="nom" id="nom" <?=$checkNom?>>
                         </div>
-
+                        <div class="col-4">
+                        <?=$errorNom?>
+                        </div>
                         <div class="col-4">
                         <label for="prenom">Prénom</label>
                         </div>
-                        <div class="col-8">
-                        <input type="text" name="prenom" id="prenom">
+                        <div class="col-4">
+                        <input type="text" name="prenom" id="prenom" <?=$checkPrenom?>>
                         </div>
-
+                        <div class="col-4">
+                        <?=$errorPrenom?>
+                        </div>
                         <div class="col-4">
                         <label for="adresse">Email</label>
                         </div>
-                        <div class="col-8">
-                        <input type="email" name="adresse" id="adresse">
+                        <div class="col-4">
+                        <input type="email" name="adresse" id="adresse" <?=$checkEmail?>>
                         </div>
-
+                        <div class="col-4">
+                        <?=$errorEmail?>
+                        </div>
                         <div class="col-4">
                         <label for="objet">objet</label>
                         </div>
@@ -73,8 +79,11 @@
                         <div class="col-4">
                             <label for="message">Votre message</label>
                         </div>
-                        <div class="col-8">
-                            <textarea name="message" id="" cols="30" rows="10"></textarea>
+                        <div class="col-4">
+                            <textarea name="message" id="" cols="30" rows="10"><?=$checkMessage?></textarea>
+                        </div>
+                        <div class="col-4">
+                        <?=$errorMessage?>
                         </div>
                         <!-- <div class="col-4">
                             <label for="upload">Ajouter une pièce jointe</label>
@@ -97,8 +106,9 @@
                 </form>
             
     </section>
-    <?php
 
+
+    <?php
         include("./assets/vue/footer.php");
         print_r($_POST);
     ?>		
