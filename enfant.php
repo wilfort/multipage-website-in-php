@@ -12,14 +12,14 @@
 <body>
 <?php
 
-include("header.php");
+include("./assets/vue/header.php");
 
 ?>
 <section>
 </section>
 <?php
 
-include("footer.php");
+include("./assets/vue/footer.php");
 
 ?>
 </body>
