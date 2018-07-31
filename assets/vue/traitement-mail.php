@@ -1,11 +1,12 @@
 <?php 
     
-    $formatUpload = explode('/', $_FILES['upload']['type']);
+    
     $nom="";$prenom="";$email="";$message="";
-    $errorNom=""; $errorPrenom=""; $errorEmail=""; $errorMessage="";
+    $errorNom=""; $errorPrenom=""; $errorEmail=""; $errorMessage="";$errorUpload="";
     $checkNom=""; $checkPrenom="";$checkEmail="";$checkMessage="";
     if(isset($_POST['envoie'])){
-    // print_r($_FILES['upload']);
+        $formatUpload = explode('/', $_FILES['upload']['type']);
+        // print_r($_FILES['upload']);
         // on initie un tableau qui va contenir toute erreur potentielle.
         $errors = array();
         // 1. Sanitisation

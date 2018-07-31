@@ -1,8 +1,9 @@
 <header>
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <div class="navbar-brand" id="band">
+    <nav class="navbar navbar-expand-md bg-light navbar-dark">
+    <div class="row"></div>
+        <span class="navbar-brand" id="band">
             <img src="./assets/img/logo.png" alt="logo de letilt">
-        </div>
+        </span>
         
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
