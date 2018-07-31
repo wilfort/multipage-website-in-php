@@ -10,17 +10,17 @@
     ?>
 </head>
 <body>
-<?php
+    <?php
 
-include("./assets/vue/header.php");
+    include("./assets/vue/header.php");
 
-?>
-<section>
-</section>
-<?php
+    ?>
+    <section>
+    </section>
+    <?php
 
-include("./assets/vue/footer.php");
+    include("./assets/vue/footer.php");
 
-?>
+    ?>
 </body>
 </html>
