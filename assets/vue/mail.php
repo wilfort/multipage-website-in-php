@@ -28,7 +28,7 @@
         $mail->addAddress($email, $nom." ".$prenom);
 
         $mail->Subject = $objet;
-        $mail->addAttachment('./assets/img/logo.png', 'logo.jpg');
+        $mail->addAttachment('./assets/uploads/', 'logo.jpg');
 
         $mail->isHTML(true);
         

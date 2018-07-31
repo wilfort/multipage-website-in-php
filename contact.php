@@ -1,7 +1,7 @@
 <?php
-
-    include ("./assets/vue/traitement-mail.php");
-    include ("/assets/php/upload.php");
+    include("./assets/php/upload.php");
+    // include("./assets/vue/traitement-mail.php");
+    
 
 ?>
 <!DOCTYPE html>
@@ -86,12 +86,12 @@
                         <div class="col-4">
                         <?=$errorMessage?>
                         </div>
-                        <!-- <div class="col-4">
+                        <div class="col-4">
                             <label for="upload">Ajouter une pièce jointe</label>
                         </div>
                         <div class="col-8">
                             <input type="file" name="upload" id="upload"><br>
-                        </div> -->
+                        </div>
                         <div class="col-4">
                             <label for="type">titre</label>
                         </div>
@@ -111,7 +111,7 @@
 
     <?php
         include("./assets/vue/footer.php");
-        print_r($_POST);
+        
     ?>		
 </body>
 </html>
