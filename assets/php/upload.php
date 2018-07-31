@@ -11,8 +11,8 @@ function uploader (){
             $handle->process('./assets/uploads/');
            
             if ($handle->processed){
-                echo 'image uploaded';
-                file_put_contents('./assets/log.txt',$today.' upload de '.$handle->file_src_name.' vers '.$handle->file_dst_name."\n",FILE_APPEND);
+                // echo 'image uploaded';
+                file_put_contents('./assets/logUploads.txt',$today.' upload de '.$handle->file_src_name.' vers '.$handle->file_dst_name."\n",FILE_APPEND);
             }
             else{
                 echo 'error'.$handle->error;
@@ -20,11 +20,10 @@ function uploader (){
         }
         else{
             echo 'type de fichier non supporté';
-            file_put_contents('./assets/log.txt',$today.' upload de '.$handle->file_src_name.':fichier non-supporté '."\n",FILE_APPEND);
+            file_put_contents('./assets/logUploads.txt',$today.' upload de '.$handle->file_src_name.':fichier non-supporté '."\n",FILE_APPEND);
         }
     }
 }
-print_r($_FILES['upload']);
 uploader();
 
 //phpinfo();

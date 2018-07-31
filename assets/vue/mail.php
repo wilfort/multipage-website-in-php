@@ -23,22 +23,24 @@
         $mail->Port = 465;
         $mail->Username = $id;
         $mail->Password = $password;
-        $mail->setFrom('wilfort.stephane@gmail.com', 'Wilfort Stesphane');
+        $mail->setFrom('wilfort.stephane@gmail.com', 'Wilfort Stephane');
 
         $mail->addAddress($email, $nom." ".$prenom);
 
         $mail->Subject = $objet;
-        $mail->addAttachment('./assets/uploads/', 'logo.jpg');
+        if($fichierTXT=="oui"){
+            $mail->addAttachment('./assets/message.txt');  
+        }
+        $mail->addAttachment('./assets/uploads/'.$photo, $photo);
 
         $mail->isHTML(true);
-        
-        $mail->Body = $message;
+        $mail->Body = $donnerMessage;
         
         if (!$mail->send()) {
             echo 'Message was not sent.';
             echo "Mailer Error: " . $mail->ErrorInfo;
         } else {
-            echo "Message sent!";
+            // echo "Message sent!";
         }
         
         

@@ -10,7 +10,7 @@
 //     $contenu.= $line . "\n";
 // }
 
-$handle = @fopen("log.txt", "r");
+$handle = @fopen("./assets/logMail.txt", "r");
 if ($handle) {
     while (($buffer = fgets($handle, 4096)) !== false) {
         $contenu .= $buffer;
@@ -25,7 +25,8 @@ if ($handle) {
   $                  Ecrire le contenue d'un fichier                    $
   $                                                                     $
   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/ 
-
+    $contenu .="Date : ".date('d/m/Y H:i:s').'
+';
     $contenu .="Genre : ".$genre.'
 ';
     $contenu .="Nom : ".$nom.'
@@ -36,7 +37,7 @@ if ($handle) {
 ';
     $contenu .="Objet : ".$objet.'
 ';
-    $contenu .="Upload : ".$genre.'
+    $contenu .="Upload : ".$photo.'
 ';
     $contenu .="Message : ".$message.'
 ';
@@ -47,7 +48,7 @@ if ($handle) {
 
 // echo $contenu;
 
-  $handle = @fopen("./log.txt", "w");
+  $handle = @fopen("./assets/logMail.txt", "w");
 
   fwrite($handle, $contenu);
 
