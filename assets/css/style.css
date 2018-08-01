@@ -18,12 +18,10 @@ body{
     background-color: #fff
 }
 
-
-.line {
+.linebar {
+    margin: 50% 0px;
     width: 100%;
-    height: 32px;
-    /* padding-top:50%;  */
-    border-bottom: solid 2px #FBA63B;
+    border: solid 2px #FBA63B;
     display: inline-block;
-    text-align: center;
 }
+.red{color: red;}
