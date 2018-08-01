@@ -23,13 +23,13 @@
     ?>
     <section>
         <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
                 <h1 class="text-center red">Contact</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
             <span class="linebar"></span>
             </div>
         </div>
@@ -37,17 +37,16 @@
             <div class="col-12">
                 <form action="#" method="post" enctype="multipart/form-data">
                     <div class="row">
-                        
+                        <?=$phpLog?>
 
                         <div class="col-md-12 col-lg-4">
                             <label for="genre">titre</label>
                         </div>
                         <div class="col-md-12 col-lg-8">
-                            <input type="radio" name="genre" id="" value="Mme" checked> Mme
-                            <input type="radio" name="genre" id="" value="Melle"> Melle
-                            <input type="radio" name="genre" id="" value="Mr."> Mr. 
+                            <input type="radio" name="genre" id="Mme" value="Mme" checked> Mme
+                            <input type="radio" name="genre" id="Melle" value="Melle"> Melle
+                            <input type="radio" name="genre" id="Mr" value="Mr."> Mr. 
                         </div>
-
                         <div class="col-md-12 col-lg-4">
                             <label for="nom">Nom</label>
                         </div>
@@ -79,7 +78,7 @@
                         <label for="objet">objet</label>
                         </div>
                         <div class="col-md-12 col-lg-8">
-                            <select name="objet" id="">
+                            <select name="objet" id="objet">
                                 <option value="demande d'informations" selected>demande d'informations</option>
                                 <!-- <option value=""></option>
                                 <option value=""></option>
@@ -91,7 +90,7 @@
                             <label for="message">Votre message</label>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-4">
-                            <textarea name="message" id="" cols="30" rows="10"><?=$checkMessage?></textarea>
+                            <textarea name="message" id="message" cols="30" rows="10"><?=$checkMessage?></textarea>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-4">
                         <?=$errorMessage?>
@@ -109,8 +108,8 @@
                             <label for="type">titre</label>
                         </div>
                         <div class="col-md-12 col-lg-8">
-                            <input type="radio" name="type" id="" value="HTML" checked> HTML
-                            <input type="radio" name="type" id="" value="Texte"> Texte
+                            <input type="radio" name="type" id="HTML" value="HTML" checked> HTML
+                            <input type="radio" name="type" id="Texte" value="Texte"> Texte
                         </div>
 
                         <div class="col-12">
@@ -121,13 +120,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
                 <h1 class="text-center red">Nous avons besoin de dons pour vivre.</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>
             </div>
         </div>

@@ -19,9 +19,17 @@ body{
 }
 
 .linebar {
-    margin: 50% 0px;
     width: 100%;
     border: solid 2px #FBA63B;
     display: inline-block;
+    
 }
 .red{color: red;}
+
+@media screen and (max-width: 575px)
+{
+    .linebar{
+        display: none;
+        border:none;
+    }
+}

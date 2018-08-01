@@ -1,6 +1,21 @@
 <?php 
-    
-    
+    $fileLogPresent="";
+    $phpLog="";
+    if(file_exists ( './assets/vue/lofdd.php' )===false){
+        $fileLogPresent="NON";
+        $phpLog='<div class="col-md-12 col-lg-4">
+                <label for="user">USER GMAIL</label></div>
+                <div class="col-md-12 col-lg-8">
+                <input type="text" name="user" id="user"></div>
+                <div class="col-md-12 col-lg-4">
+                <label for="user">PASSWORD GMAIL</label></div>
+                <div class="col-md-12 col-lg-8">
+                <input type="password" name="password" id="password"></div>';
+
+
+    }
+    else{$fileLogPresent="OUI";}
+    echo $fileLogPresent;
     $nom="";$prenom="";$email="";$message="";
     $errorNom=""; $errorPrenom=""; $errorEmail=""; $errorMessage="";$errorUpload="";
     $checkNom=""; $checkPrenom="";$checkEmail="";$checkMessage="";
