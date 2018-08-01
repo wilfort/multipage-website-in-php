@@ -1,6 +1,7 @@
 <?php
 
-     include("./assets/vue/traitement-mail.php");
+     include("assets/vue/traitement-mail.php");
+     //include ("assets/php/upload.php");
     
 
 ?>
@@ -45,28 +46,28 @@
                             <input type="text" name="nom" id="nom" <?=$checkNom?>>
                         </div>
                         <div class="col-4">
-                        <?=$errorNom?>
+                            <?=$errorNom?>
                         </div>
                         <div class="col-4">
-                        <label for="prenom">Prénom</label>
+                            <label for="prenom">Prénom</label>
                         </div>
                         <div class="col-4">
-                        <input type="text" name="prenom" id="prenom" <?=$checkPrenom?>>
+                            <input type="text" name="prenom" id="prenom" <?=$checkPrenom?>>
                         </div>
                         <div class="col-4">
-                        <?=$errorPrenom?>
+                            <?=$errorPrenom?>
                         </div>
                         <div class="col-4">
-                        <label for="adresse">Email</label>
+                            <label for="adresse">Email</label>
                         </div>
                         <div class="col-4">
-                        <input type="email" name="adresse" id="adresse" <?=$checkEmail?>>
+                            <input type="email" name="adresse" id="adresse" <?=$checkEmail?>>
                         </div>
                         <div class="col-4">
-                        <?=$errorEmail?>
+                            <?=$errorEmail?>
                         </div>
                         <div class="col-4">
-                        <label for="objet">objet</label>
+                            <label for="objet">objet</label>
                         </div>
                         <div class="col-8">
                             <select name="objet" id="">
@@ -84,7 +85,7 @@
                             <textarea name="message" id="" cols="30" rows="10"><?=$checkMessage?></textarea>
                         </div>
                         <div class="col-4">
-                        <?=$errorMessage?>
+                            <?=$errorMessage?>
                         </div>
                         <div class="col-4">
                             <label for="upload">Ajouter une pièce jointe</label>
@@ -93,7 +94,7 @@
                             <input type="file" name="upload" id="upload">
                         </div>
                         <div class="col-4">
-                        <?=$errorUpload?>
+                            <?=$errorUpload?>
                         </div>
                         <div class="col-4">
                             <label for="type">titre</label>

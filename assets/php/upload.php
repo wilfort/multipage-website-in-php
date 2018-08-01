@@ -11,7 +11,7 @@ function uploader (){
             $handle->process('./assets/uploads/');
            
             if ($handle->processed){
-                // echo 'image uploaded';
+                echo 'image uploaded';
                 file_put_contents('./assets/logUploads.txt',$today.' upload de '.$handle->file_src_name.' vers '.$handle->file_dst_name."\n",FILE_APPEND);
             }
             else{
