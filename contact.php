@@ -1,7 +1,8 @@
 <?php
 
-     include("assets/vue/traitement-mail.php");
-     //include ("assets/php/upload.php");
+     //include("assets/vue/traitement-mail.php");
+     //uncomment for version of mailer +upload by Son
+     include ("assets/php/mailer.php");
     
 
 ?>
@@ -55,7 +56,7 @@
                             <input type="text" name="prenom" id="prenom" <?=$checkPrenom?>>
                         </div>
                         <div class="col-4">
-                            <?=$errorPrenom?>
+                           <?=$errorPrenom?>
                         </div>
                         <div class="col-4">
                             <label for="adresse">Email</label>

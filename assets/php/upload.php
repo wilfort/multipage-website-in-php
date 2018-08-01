@@ -1,6 +1,6 @@
 <?php
 
-require ('./vendor/verot/class.upload.php/src/class.upload.php');
+require __DIR__.'/../../vendor/verot/class.upload.php/src/class.upload.php';
 
 function uploader (){
     $today= date('d/m/Y H:i:s');
@@ -13,13 +13,16 @@ function uploader (){
             if ($handle->processed){
                 echo 'image uploaded';
                 file_put_contents('./assets/logUploads.txt',$today.' upload de '.$handle->file_src_name.' vers '.$handle->file_dst_name."\n",FILE_APPEND);
+                global $attachment;
+                $attachment = $handle->file_src_name;
             }
             else{
                 echo 'error'.$handle->error;
             }
         }
         else{
-            echo 'type de fichier non supporté';
+            global $errorUpload;
+            $errorUpload= "<span class='erreur'>Type de fichier non supporté.</span>";
             file_put_contents('./assets/logUploads.txt',$today.' upload de '.$handle->file_src_name.':fichier non-supporté '."\n",FILE_APPEND);
         }
     }
