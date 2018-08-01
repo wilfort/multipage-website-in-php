@@ -25,11 +25,22 @@ body{
     
 }
 .red{color: red;}
-
+#plan{
+    width: 50%;
+}
 @media screen and (max-width: 575px)
 {
     .linebar{
         display: none;
         border:none;
     }
+
 }
+@media screen and (max-width: 767px)
+{
+    
+    #plan{
+        width: 100%;
+    }
+}
+

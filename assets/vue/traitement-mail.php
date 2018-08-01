@@ -5,19 +5,24 @@
         $fileLogPresent="NON";
         $phpLog='<div class="col-md-12 col-lg-4">
                 <label for="user">USER GMAIL</label></div>
-                <div class="col-md-12 col-lg-8">
+                <div class="col-sm-12 col-md-6 col-lg-4">
                 <input type="text" name="user" id="user"></div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                        <?=$errorEmailUser?>
+                        </div>
                 <div class="col-md-12 col-lg-4">
-                <label for="user">PASSWORD GMAIL</label></div>
-                <div class="col-md-12 col-lg-8">
-                <input type="password" name="password" id="password"></div>';
-
-
+                <label for="password">PASSWORD GMAIL</label></div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                <input type="password" name="password" id="password"></div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                <?=$errorPassword?>
+                </div>';
     }
     else{$fileLogPresent="OUI";}
-    echo $fileLogPresent;
-    $nom="";$prenom="";$email="";$message="";
-    $errorNom=""; $errorPrenom=""; $errorEmail=""; $errorMessage="";$errorUpload="";
+    // echo $fileLogPresent;
+    $nom="";$prenom="";$email="";$message="";$id="";$password="";
+    $errorNom=""; $errorPrenom=""; $errorEmail=""; $errorMessage="";
+    $errorUpload="";$errorEmailUser="";$errorPassword="";
     $checkNom=""; $checkPrenom="";$checkEmail="";$checkMessage="";
     if(isset($_POST['envoie'])){
         $formatUpload = explode('/', $_FILES['upload']['type']);
@@ -30,7 +35,7 @@
         $nom = filter_var($_POST['nom'],FILTER_SANITIZE_STRING);
         $chifNom = "".filter_var($nom,FILTER_SANITIZE_NUMBER_INT)."";
         $checkNom = "value='". $nom."'";
-// echo $chifNom;
+        // echo $chifNom;
         $prenom = filter_var($_POST['prenom'],FILTER_SANITIZE_STRING);
         $chifPrenom = "".filter_var($prenom,FILTER_SANITIZE_NUMBER_INT)."";
         $checkPrenom = "value='". $prenom."'";
@@ -97,14 +102,30 @@ $handle = @fopen("./assets/message.txt", "w");
 
   fclose($handle);
         }
+
+        if ($fileLogPresent=="NON"){
+            $id = filter_var($_POST['user'], FILTER_SANITIZE_EMAIL);
+            if ((false === filter_var($id, FILTER_VALIDATE_EMAIL)) OR (empty($id)==true)) {
+                $errors['emailUser'] =  "Cette adresse est invalide.";
+                $errorEmailUser="<span class='erreur'>Cette adresse est invalide.</span>";
+            }
+            $password = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
+            if ((false === filter_var($password, FILTER_VALIDATE_STRING)) OR (empty($password)==true)) {
+                $errors['password'] =  "Ce password est invalide.";
+                $errorPassword="<span class='erreur'>Ce password est invalide.</span>";
+                }
+
+
+        }else{include('./assets/vue/log.php');}
         // 3. Exécution
         if (count($errors)=== 0){
             include("./assets/php/upload.php");
             include("./assets/vue/logActiviter.php");
             include("./assets/vue/mail.php");
+            unset($mail);
         }
         
-
+        unset($_POST);
         
     
     }

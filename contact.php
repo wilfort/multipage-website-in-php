@@ -27,12 +27,58 @@
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
+                <h1 class="text-center red">Accès</h1>
+            </div>
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <span class="linebar"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+            <h2>TILT</h2>
+            <p>Initié par l’asbl Odyssea</p>
+
+            <h3>Adresse</h3>
+            <p>Chemin du Meunier 44 – 1330 Rixensart</p>
+
+            <h3>Numéro de téléphone</h3>
+            <p>Les lundis et vendredis de 9h à 13h au 02 633 51 21</p>
+
+            <h3>Numéro de compte du Tilt   Odyssea asbl </h3>
+            <p>BE18 0689 3112 6265
+            <br>Bic: GKCCBEBB</p>
+
+            <h3>Email</h3>
+            <p>info@letilt.be</p>
+
+            <p>Les réservations des groupes scolaires et des fêtes d’anniversaire se font uniquement par téléphone les lundis et vendredis de 9h00 à 13h00.</p>
+
+            <p>Les réservations des stages peuvent se faire en ligne à partir de ce lundi 16 janvier 2017 et par téléphone aux permanences ci-dessus.</p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-8 my-auto text-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5053.407655914593!2d4.528792028076819!3d50.70688041804618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x47c3d6f834458dd5%3A0x10b4ce8e5925fcc9!2sChemin+du+Meunier+44%2C+1330+Rixensart!3m2!1d50.7068805!2d4.5331694!5e0!3m2!1sfr!2sbe!4v1533130870562" 
+                width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p>Vous pouvez envoyer un mail qui nous informera préalablement de votre souhait et nous essayons dans la mesure du possible d’y donner une bonne suite.</p>
+
+                <p>En dehors de ces heures, et pour des questions urgentes uniquement, vous pouvez nous joindre au 0477 662 968.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+                <span class="linebar"></span>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
                 <h1 class="text-center red">Contact</h1>
             </div>
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
             <span class="linebar"></span>
             </div>
         </div>
+
         <div class="row">           
             <div class="col-12">
                 <form action="#" method="post" enctype="multipart/form-data">
@@ -119,6 +165,38 @@
                 </form>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+                <span class="linebar"></span>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
+                <h1 class="text-center red">Bon à savoir !</h1>
+            </div>
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <span class="linebar"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                
+            <p>Attention, étant donné les travaux du RER, il est préférable d’indiquer dans le GPS le Ciné Centre de Rixensart avenue de Mérode.</p>
+
+            <p>Ensuite, une fois que vous êtes devant le cinéma, roulez jusqu’au rond-point et là prendre la direction Court-Saint-Etienne.</p>
+
+            <p>Deuxième rue à gauche, l’avenue Boulogne Bilancourt, dans cette rue prendre la 3ème à gauche l’avenue de l’Europe jusqu’au T à gauche, vous êtes chemin du Meunier.</p>
+
+            <p>Le Tilt se trouve dans la cour de la Ferme de Froidmont (dans le bas de la cour à droite).
+            <br>SNCB Gare de Rixensart sur les lignes Bruxelles – Ottignies/Louvain-la-Neuve/Namur.
+            <br>Le TILT se situe près de la gare, entre 5 et 10 minutes à pied.</p>
+
+            <p>Pour les autocars: Veuillez trouver ci-dessous le plan d’accès. Merci de faire garer l’autocar hors du parking qui appartient à la Fabrique d’église et nous demande de laisser le parking libre la journée</p>
+            </div>
+            <div class="col-12">
+                <img class="mx-auto d-block img-fluid" src="./assets/img/plan-daccès-tilt.jpg" alt="Plan d'accès de Tilt"id="plan">
+            </div>
+        </div>
         <div class="row">
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>
@@ -135,7 +213,7 @@
                 <h1 class="text-center red">Don financier</h1>
             </div>
             <div class="col-12">
-                <img src="./assets/img/presentation.jpg" alt="">
+                <img class="mx-auto d-block img-fluid" src="./assets/img/presentation.jpg" alt="">
             </div>
             <div class="col-12">
                 Vous avez envie de faire un don à une association ? Un projet qui a du sens, qui poursuit une mission auprès des jeunes, qui les pousse à réfléchir et qui favorise leur ouverture d’esprit ? Les dons faits à la Fondation donnent droit à <b>une attestation fiscale à partir de € 40</b> (art. 145/33 CIR).

@@ -8,7 +8,7 @@
     //Import PHPMailer classes into the global namespace
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
-    include('./assets/vue/log.php');
+    
     // require 'path/to/PHPMailer/src/Exception.php';
     // require 'path/to/PHPMailer/src/PHPMailer.php';
     // require 'path/to/PHPMailer/src/SMTP.php';
