@@ -27,5 +27,4 @@ function uploader (){
 uploader();
 
 //phpinfo();
-
 ?>
