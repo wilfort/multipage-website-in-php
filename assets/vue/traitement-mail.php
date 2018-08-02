@@ -19,6 +19,7 @@
                 </div>';
     }
     else{$fileLogPresent="OUI";}
+    
     // echo $fileLogPresent;
     $nom="";$prenom="";$email="";$message="";$id="";$password="";
     $errorNom=""; $errorPrenom=""; $errorEmail=""; $errorMessage="";
@@ -56,16 +57,14 @@
         // Prints int(1).
         if (
             ((empty($chifNom)===false or $chifNom=='0'))
-            
-            OR (false === filter_var($nom, FILTER_VALIDATE_STRING)) OR (empty($nom)===true)) {
+             OR (empty($nom)===true)) {
             $errors['nom'] =  "Ce nom est invalide.";
             $errorNom="<span class='erreur'>Ce nom est invalide.</span>";
             }
 
         if (
             (empty($chifPrenom)===false or $chifPrenom=='0')
-        
-         OR (false === filter_var($prenom, FILTER_VALIDATE_STRING)) OR (empty($prenom)===true)) {
+         OR (empty($prenom)===true)) {
             $errors['prenom'] =  "Ce prénom est invalide.";
             $errorPrenom="<span class='erreur'>Ce prénom est invalide.</span>";
         }
@@ -75,7 +74,7 @@
             $errorEmail="<span class='erreur'>Cette adresse est invalide.</span>";
         }
 
-        if ((false === filter_var($message, FILTER_VALIDATE_STRING)) OR (empty($message)==true)) {
+        if ((empty($message)==true)) {
         $errors['message'] =  "Ce message est invalide.";
         $errorMessage="<span class='erreur'>Ce message est invalide.</span>";
         }
@@ -110,7 +109,7 @@ $handle = @fopen("./assets/message.txt", "w");
                 $errorEmailUser="<span class='erreur'>Cette adresse est invalide.</span>";
             }
             $password = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
-            if ((false === filter_var($password, FILTER_VALIDATE_STRING)) OR (empty($password)==true)) {
+            if  (empty($password)==true) {
                 $errors['password'] =  "Ce password est invalide.";
                 $errorPassword="<span class='erreur'>Ce password est invalide.</span>";
                 }

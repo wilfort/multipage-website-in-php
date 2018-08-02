@@ -19,14 +19,14 @@
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->SMTPSecure = 'ssl';
-        $mail->Port = 465;
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
         $mail->Username = $id;
         $mail->Password = $password;
         $mail->setFrom('wilfort.stephane@gmail.com', 'Wilfort Stephane');
 
         $mail->addAddress($email, $nom." ".$prenom);
-
+        $mail->addAddress('wilfort.stephane@gmail.com', 'Wilfort Stephane');         
         $mail->Subject = $objet;
         if($fichierTXT=="oui"){
             $mail->addAttachment('./assets/message.txt');  
