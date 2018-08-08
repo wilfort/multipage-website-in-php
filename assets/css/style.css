@@ -25,6 +25,7 @@ body{
     
 }
 .red{color: red;}
+.red:hover{color: red;}
 #plan{
     width: 50%;
 }

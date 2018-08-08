@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="page contient information sur le contact et les dons">
     <title>Contactez-nous</title>
     <?php 
         include("./assets/vue/link.php")
@@ -58,7 +59,7 @@
             </div>
             <div class="col-sm-12 col-md-6 col-lg-8 my-auto text-center">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5053.407655914593!2d4.528792028076819!3d50.70688041804618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x47c3d6f834458dd5%3A0x10b4ce8e5925fcc9!2sChemin+du+Meunier+44%2C+1330+Rixensart!3m2!1d50.7068805!2d4.5331694!5e0!3m2!1sfr!2sbe!4v1533130870562" 
-                width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                width="400" height="300" frameborder="0" style="border:0" allowfullscreen title="plan"></iframe>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <p>Vous pouvez envoyer un mail qui nous informera préalablement de votre souhait et nous essayons dans la mesure du possible d’y donner une bonne suite.</p>
@@ -89,9 +90,9 @@
                             <label for="genre">titre</label>
                         </div>
                         <div class="col-md-12 col-lg-8">
-                            <input type="radio" name="genre" id="Mme" value="Mme" checked> Mme
-                            <input type="radio" name="genre" id="Melle" value="Melle"> Melle
-                            <input type="radio" name="genre" id="Mr" value="Mr."> Mr. 
+                            <input type="radio" name="genre" id="Mme" value="Mme" checked> <label for="Mme">Mme</label>
+                            <input type="radio" name="genre" id="Melle" value="Melle"> <label for="Melle">Melle</label>
+                            <input type="radio" name="genre" id="Mr" value="Mr."> <label for="Mr">Mr.</label>
                         </div>
                         <div class="col-md-12 col-lg-4">
                             <label for="nom">Nom</label>
@@ -154,8 +155,8 @@
                             <label for="type">titre</label>
                         </div>
                         <div class="col-md-12 col-lg-8">
-                            <input type="radio" name="type" id="HTML" value="HTML" checked> HTML
-                            <input type="radio" name="type" id="Texte" value="Texte"> Texte
+                            <input type="radio" name="type" id="HTML" value="HTML" checked> <label for="HTML">HTML</label>
+                            <input type="radio" name="type" id="Texte" value="Texte"> <label for="Texte">Texte</label>
                         </div>
 
                         <div class="col-12">
@@ -197,6 +198,7 @@
                 <img class="mx-auto d-block img-fluid" src="./assets/img/plan-daccès-tilt.jpg" alt="Plan d'accès de Tilt"id="plan">
             </div>
         </div>
+        <hr>
         <div class="row">
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>

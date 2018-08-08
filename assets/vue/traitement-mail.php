@@ -1,7 +1,7 @@
 <?php 
     $fileLogPresent="";
     $phpLog="";
-    if(file_exists ( './assets/vue/lofdd.php' )===false){
+    if(file_exists ( './assets/vue/log.php' )===false){
         $fileLogPresent="NON";
         $phpLog='<div class="col-md-12 col-lg-4">
                 <label for="user">USER GMAIL</label></div>
