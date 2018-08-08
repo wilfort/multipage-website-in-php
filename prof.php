@@ -53,7 +53,7 @@
                 </ul>
                 <p>
                     Tarifs sur demande. Disponibilité selon certaines conditions.<br>
-                    Contactez-nous à <a href="mailto:location@letilt.be" target="_blank" rel="noopener noreferrer" class="red">info@letilt.be</a> pour plus d’information.
+                    Contactez-nous à <a href="mailto:location@letilt.be" target="_blank" rel="noopener noreferrer" class="linkred">info@letilt.be</a> pour plus d’information.
                 </p>                    
             </div>
             <div class="col-md-12 col-lg-6">
@@ -118,7 +118,7 @@
                 <li>Tous les vendredis de nos stages, nous cuisinons ensemble un repas festif et inventif. (N’hésitez pas à communiquer les allergies ou intolérances alimentaires afin que nous adaptions au mieux le repas de votre enfant.)</li>
                 <li>Nos stages sont agréés par l’<b>ONE</b> vous bénéficiez donc d’une <b>attestation fiscale</b> en fin de stage (Pour les stages de minimum 72h)<br>
                 Nous complétons également volontiers vos documents qui permettent de récupérer une partie du prix du stage via votre mutuelle.</li>
-                <li><a class="red" href="./assets/pdf/2018CONDGENSTG.pdf">Conditions générales de stage 2018</a></li>
+                <li><a class="linkred" href="./assets/pdf/2018CONDGENSTG.pdf">Conditions générales de stage 2018</a></li>
                 </ul>                      
             </div>
             <div class="col-12">

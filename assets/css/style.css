@@ -30,8 +30,9 @@ body{
 }
 .navlinkcolor{color:#FFA000;}
 .navlinkcolor:hover{color: #FFA000;}
-.red{color: red;}
-.red:hover{color: red;}
+.greenL{color:#99CC00;}
+.red, .linkred{color: red;}
+.linkred:hover{color: red;}
 #plan{
     width: 50%;
 }

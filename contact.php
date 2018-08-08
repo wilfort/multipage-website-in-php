@@ -167,7 +167,7 @@
             </div>
         </div>
         <hr>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>
             </div>
@@ -198,7 +198,7 @@
                 <img class="mx-auto d-block img-fluid" src="./assets/img/plan-daccès-tilt.jpg" alt="Plan d'accès de Tilt"id="plan">
             </div>
         </div>
-        <hr>
+        <hr> -->
         <div class="row">
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>
@@ -226,7 +226,7 @@
             <div class="col-12">
                 <ul>
                     <li>
-                        Vos dons peuvent  être versés sur notre projet « <a href="http://www.bonnescauses.be/organisation/?id=0884345931&SearchTerm=odyssea%20asbl&autoSuggestWasUsed=5955,fr&Citydistance=5" class="red">Odyssea asbl</a> » (Site de la Fondation Roi Baudoin) jusqu’au <b>30/03/18</b>. C’est la Fondation Roi Baudouin qui vous fournira l’attestation fiscale dont vous aurez besoin pour votre déductibilité.
+                        Vos dons peuvent  être versés sur notre projet « <a href="http://www.bonnescauses.be/organisation/?id=0884345931&SearchTerm=odyssea%20asbl&autoSuggestWasUsed=5955,fr&Citydistance=5" class="linkred">Odyssea asbl</a> » (Site de la Fondation Roi Baudoin) jusqu’au <b>30/03/18</b>. C’est la Fondation Roi Baudouin qui vous fournira l’attestation fiscale dont vous aurez besoin pour votre déductibilité.
                     </li>
                     <li>
                         Les dons pour le projet peuvent être versés jusqu’au 30/03/18 au compte <b>IBAN BE10 0000 0000 0404 – BIC: BPOTBEB1</b> de la Fondation Roi Baudouin avec la mention obligatoire ‘128/2887/00017’.
