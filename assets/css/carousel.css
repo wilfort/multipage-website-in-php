@@ -44,5 +44,6 @@
   }
   .logo{width: 40%;
         height: auto;}
-  .part{width: 60%;
-          height: auto;}
+  .part{width: 40%;
+          height: 200px;
+        }

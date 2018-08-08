@@ -9,7 +9,7 @@
                 <div class="col-2 align-self-center text-center"><button name="prev" class="prev align-middle" onclick="botPart(-1)">
 								<b><<</b>
 							</button></div>
-                <div class="col-8">
+                <div class="col-8" >
                     <div class="myPart">
                         <img class="part mx-auto d-block" src="./assets/img/tilt-logo-bw.jpg" alt="Le Brabant wallon">
                     </div>
