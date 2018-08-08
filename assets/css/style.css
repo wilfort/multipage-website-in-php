@@ -39,7 +39,17 @@ body{
     width:auto;
     max-height: 200px;
 }
-
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+.rotation:before {
+    animation: spin 2s infinite alternate-reverse;
+  }
 @media screen and (max-width: 575px)
 {
     .linebar{

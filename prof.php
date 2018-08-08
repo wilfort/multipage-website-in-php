@@ -61,6 +61,7 @@
             <img class="mx-auto d-block img-fluid" src="./assets/img/local.jpg" alt="local">
             </div>
         </div>
+        <hr>
         <div class="row">
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>
@@ -134,6 +135,7 @@
                 </div>
             </div>
         </div>
+        <hr>
         <div class="row">
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>

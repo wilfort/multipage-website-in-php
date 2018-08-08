@@ -67,7 +67,7 @@
                 <p>En dehors de ces heures, et pour des questions urgentes uniquement, vous pouvez nous joindre au 0477 662 968.</p>
             </div>
         </div>
-
+        <hr>
         <div class="row">
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>
@@ -166,7 +166,7 @@
                 </form>
             </div>
         </div>
-
+        <hr>
         <div class="row">
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>
