@@ -11,28 +11,28 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="nav nav-pills nav-fill">
                     <li class="nav-item">
-                        <a class="nav-link red" href="index.php">
+                        <a class="nav-link navlinkcolor" href="index.php">
                              Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link red" href="enfant.php">
+                        <a class="nav-link navlinkcolor" href="enfant.php">
                              Enfant</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link red" href="prof.php">
+                        <a class="nav-link navlinkcolor" href="prof.php">
                              professionnel</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link red" href="contact.php">
+                        <a class="nav-link navlinkcolor" href="contact.php">
                             Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link red" href="https://www.facebook.com/letilt/">
+                        <a class="nav-link navlinkcolor" href="https://www.facebook.com/letilt/">
                         <i class="fa fa-facebook-f"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link red" href="https://plus.google.com/+TiltRixensart-espace-eveil-culturel-et-d-ouverture">
+                        <a class="nav-link navlinkcolor" href="https://plus.google.com/+TiltRixensart-espace-eveil-culturel-et-d-ouverture">
                         <i class="fa fa-google-plus"></i></a>
                     </li>
                 </ul>

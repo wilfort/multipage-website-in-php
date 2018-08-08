@@ -1,6 +1,6 @@
 .footer{
     background-color: #343A40;
-    color: red;
+    color: #FFA000;
 }
 .row{
     margin: 0px;
@@ -28,6 +28,8 @@ body{
     display: inline-block;
     
 }
+.navlinkcolor{color:#FFA000;}
+.navlinkcolor:hover{color: #FFA000;}
 .red{color: red;}
 .red:hover{color: red;}
 #plan{
