@@ -45,5 +45,10 @@
   .logo{width: 40%;
         height: auto;}
   .part{width: 40%;
-          height: 200px;
+          height: auto;
+          max-height: 200px;
+          
         }
+  .photoPart{width: auto;
+    height: 220px;
+    vertical-align: middle;}
