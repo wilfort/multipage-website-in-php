@@ -42,3 +42,7 @@
   .cursor:hover {
     opacity: 1;
   }
+  .logo{width: 40%;
+        height: auto;}
+  .part{width: 60%;
+          height: auto;}
