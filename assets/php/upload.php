@@ -14,7 +14,7 @@ function uploader (){
                 echo 'image uploaded';
                 file_put_contents('./assets/logUploads.txt',$today.' upload de '.$handle->file_src_name.' vers '.$handle->file_dst_name."\n",FILE_APPEND);
                 global $attachment;
-                $attachment = $handle->file_src_name;
+                $attachment = $handle->file_dst_name;
             }
             else{
                 echo 'error'.$handle->error;
