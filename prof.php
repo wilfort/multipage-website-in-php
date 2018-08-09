@@ -18,13 +18,13 @@
     ?>
     <section>
         <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Location</h1>
+                <h1 class="text-center Cred">Location</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
             <span class="linebar"></span>
             </div>
         </div>
@@ -63,19 +63,19 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Les stages</h1>
+                <h1 class="text-center Cred">Les stages</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
             <span class="linebar"></span>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-            <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/logoStage.png" alt="stage">
+            <img class="mx-auto d-block img-fluid taillePhotoS animated rotateIn infinite" src="./assets/img/logoStage.png" alt="stage">
             </div>
             <div class="col-md-12 col-lg-6">
             <img class="mx-auto d-block img-fluid" src="./assets/img/StageSite.png" alt="stage">
@@ -103,11 +103,11 @@
             </div>
             <div class="col-6">
             <h5><b>Tarifs</b></h5>
-            <p>27 €/jour soit 135 €<span class="red">*</span> pour les stages d’une semaine / 108 €<span class="red">*</span> pour les semaines avec un jour férié.<br>
+            <p>27 €/jour soit 135 €<span class="Cred">*</span> pour les stages d’une semaine / 108 €<span class="Cred">*</span> pour les semaines avec un jour férié.<br>
             10% de réduction à partir du 2ème enfant.<br>
             Tarif Article 27 disponible sur simple demande. Réduction de 5 euros pour les membres de la Ligue des familles.<br>
             Garderie : 2 euros par famille par garderie.<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="red">*</span> Le montant de l’inscription ne doit pas être un frein à la participation.</p>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="Cred">*</span> Le montant de l’inscription ne doit pas être un frein à la participation.</p>
             </div>
             <div class="col-12">
             <h5><b>Bon à savoir</b></h5>
@@ -137,13 +137,13 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Formations</h1>
+                <h1 class="text-center Cred">Formations</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
             <span class="linebar"></span>
             </div>
         </div>
@@ -154,7 +154,7 @@
             <div class="col-12">
             <p>Forts de notre expérience avec les groupes d’enfants et les familles, nous avons développé une série de méthodes pédagogiques et d’outils précieux dans le but de mettre le participant en situation de plaisir d’apprentissage. Nous souhaitons à présent partager cela en proposant des formations destinées aux adultes, professionnels de l’enfance qui souhaiteraient enrichir leurs capacités à faire émerger l’expression créative chez l’enfant.</p>
 
-<p><span class="red">« Je n’ai aucun talent », « je n’ai pas d’imagination »</span>. Nous débattrons sur ces phrases si souvent entendues et nous apprendrons à faire connaissance avec notre potentiel créatif pour encourager son émergence. Un temps pour sortir de ses habitudes et ainsi vivre sa créativité pour mieux la cerner. Par le partage, l’expérimentation, le jeu, l’échange… Nous approcherons l’expression créative de manière individuelle et collective.</p>
+<p><span class="Cred">« Je n’ai aucun talent », « je n’ai pas d’imagination »</span>. Nous débattrons sur ces phrases si souvent entendues et nous apprendrons à faire connaissance avec notre potentiel créatif pour encourager son émergence. Un temps pour sortir de ses habitudes et ainsi vivre sa créativité pour mieux la cerner. Par le partage, l’expérimentation, le jeu, l’échange… Nous approcherons l’expression créative de manière individuelle et collective.</p>
 
 <p>1. <b>« Les indispensables de la créativité »</b></p>
 <p>Par des jeux et des réflexions de groupes, les participants seront amenés à réfléchir à la créativité et à comment ils la pratiquent dans leur travail. Ils seront ensuite amenés à participer à des ateliers animés, pour être plongé dans leur propre potentiel créatif. Ils pourront dès lors analyser les étapes et les démarches que le formateur à mis en place, ainsi que les outils et les médiums utilisés lors des ateliers.</p>

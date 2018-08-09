@@ -21,7 +21,7 @@ h1{
 body{
     background-color: #fff
 }
-
+.ZPad{padding: 0px;}
 .linebar {
     width: 100%;
     border: solid 2px #FBA63B;
@@ -31,7 +31,7 @@ body{
 .navlinkcolor{color:#FFA000;}
 .navlinkcolor:hover{color: #FFA000;}
 .greenL{color:#99CC00;}
-.red, .linkred{color: red;}
+.Cred, .linkred{color: red;}
 .linkred:hover{color: red;}
 #plan{
     width: 50%;
@@ -40,16 +40,12 @@ body{
     width:auto;
     max-height: 200px;
 }
-@keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+.rotation{border-radius: 50%;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+            transition:         transform .8s ease-in-out;}
 .rotation:before {
-    animation: spin 2s infinite alternate-reverse;
+    -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
   }
 @media screen and (max-width: 575px)
 {

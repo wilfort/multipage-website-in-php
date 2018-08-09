@@ -1,7 +1,7 @@
 <?php
 
 require ('./vendor/verot/class.upload.php/src/class.upload.php');
-
+$logUpload;
 function uploader (){
     $today= date('d/m/Y H:i:s');
     $handle = new upload($_FILES['upload']);
@@ -13,6 +13,7 @@ function uploader (){
             if ($handle->processed){
                 // echo 'image uploaded';
                 file_put_contents('./assets/logUploads.txt',$today.' upload de '.$handle->file_src_name.' vers '.$handle->file_dst_name."\n",FILE_APPEND);
+                $logUpload=$today.' upload de '.$handle->file_src_name.' vers '.$handle->file_dst_name;
             }
             else{
                 echo 'error'.$handle->error;
@@ -21,6 +22,7 @@ function uploader (){
         else{
             echo 'type de fichier non supporté';
             file_put_contents('./assets/logUploads.txt',$today.' upload de '.$handle->file_src_name.':fichier non-supporté '."\n",FILE_APPEND);
+            $logUpload=$today.' upload de '.$handle->file_src_name.':fichier non-supporté.';
         }
     }
 }

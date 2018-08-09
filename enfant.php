@@ -22,7 +22,7 @@ include("./assets/vue/header.php");
             <span class="linebar"></span>
         </div>
         <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-            <h1 class="text-center red">Ateliers d’Expression et de Créativité – CEC</h1>
+            <h1 class="text-center Cred">Ateliers d’Expression et de Créativité – CEC</h1>
         </div>
         <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
             <span class="linebar"></span>
@@ -70,7 +70,7 @@ include("./assets/vue/header.php");
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Organiser un anniversaire n’est pas une mince affaire !</h1>
+                <h1 class="text-center Cred">Organiser un anniversaire n’est pas une mince affaire !</h1>
             </div>
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>
@@ -79,7 +79,7 @@ include("./assets/vue/header.php");
     <div class="row">
         <div class="col-7">
             <div class="row">
-                <div class="col-12 red">
+                <div class="col-12 Cred">
                     <p>
                         Au Tilt, nous vous offrons un espace où les enfants peuvent jouer, cuisiner, créer, rêver, se laisser porter par leur imaginaire.
                     </p>
@@ -197,7 +197,7 @@ include("./assets/vue/header.php");
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Venir en famille</h1>
+                <h1 class="text-center Cred">Venir en famille</h1>
             </div>
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>
@@ -263,7 +263,7 @@ Nous acceptons les chèques Sport & Culture ainsi que les tickets Compliment.</d
             <span class="linebar"></span>
         </div>
         <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-            <h1 class="text-center red">La Cellule des Grands Explorateurs</h1>
+            <h1 class="text-center Cred">La Cellule des Grands Explorateurs</h1>
         </div>
         <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
             <span class="linebar"></span>
@@ -289,7 +289,7 @@ On se retrouve 7 dimanche par an au Tilt (ou ailleurs si précisé) de 10h30 à 
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Animations pour les groupes (parascolaire)</h1>
+                <h1 class="text-center Cred">Animations pour les groupes (parascolaire)</h1>
             </div>
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>
@@ -340,7 +340,7 @@ Nous sommes désolés mais il est difficile de vous recevoir durant les autres c
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Projets avec vos groupes-classe</h1>
+                <h1 class="text-center Cred">Projets avec vos groupes-classe</h1>
             </div>
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                 <span class="linebar"></span>
@@ -365,7 +365,7 @@ Le Tilt est là pour développer vos projets et encourager vos élèves à deven
                             <span class="linebar"></span>
                         </div>
                         <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                            <h1 class="text-center red">Les classes maternelles</h1>
+                            <h1 class="text-center Cred">Les classes maternelles</h1>
                         </div>
                         <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                             <span class="linebar"></span>
@@ -460,7 +460,7 @@ Le Tilt est là pour développer vos projets et encourager vos élèves à deven
                             <span class="linebar"></span>
                         </div>
                         <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                            <h1 class="text-center red">Les classes primaires</h1>
+                            <h1 class="text-center Cred">Les classes primaires</h1>
                         </div>
                         <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                             <span class="linebar"></span>
@@ -570,7 +570,7 @@ Le Tilt est là pour développer vos projets et encourager vos élèves à deven
                             <span class="linebar"></span>
                         </div>
                         <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                            <h1 class="text-center red">Les classes d’enseignement spécial</h1>
+                            <h1 class="text-center Cred">Les classes d’enseignement spécial</h1>
                         </div>
                         <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
                             <span class="linebar"></span>

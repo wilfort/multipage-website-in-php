@@ -24,13 +24,13 @@
     ?>
     <section>
         <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Accès</h1>
+                <h1 class="text-center Cred">Accès</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
             <span class="linebar"></span>
             </div>
         </div>
@@ -69,13 +69,13 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Contact</h1>
+                <h1 class="text-center Cred">Contact</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
             <span class="linebar"></span>
             </div>
         </div>
@@ -168,13 +168,13 @@
         </div>
         <hr>
         <!-- <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Bon à savoir !</h1>
+                <h1 class="text-center Cred">Bon à savoir !</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
             <span class="linebar"></span>
             </div>
         </div>
@@ -200,19 +200,19 @@
         </div>
         <hr> -->
         <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Nous avons besoin de dons pour vivre.</h1>
+                <h1 class="text-center Cred">Nous avons besoin de dons pour vivre.</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center red">Don financier</h1>
+                <h1 class="text-center Cred">Don financier</h1>
             </div>
             <div class="col-12">
                 <img class="mx-auto d-block img-fluid" src="./assets/img/presentation.jpg" alt="">
@@ -234,7 +234,7 @@
                 </ul>
             </div>
             <div class="col-12">
-                <h1 class="text-center red">Don matériel</h1>
+                <h1 class="text-center Cred">Don matériel</h1>
             </div>
             <div class="col-12">
                 Vous videz votre maison, vous terminez une activité, vous avez des objets de décoration à donner, du papier de dessin, du matériel d’animation à donner, des atlas, des cartes routières, des bijoux de fantaisie ? Vous ne voulez pas jeter ? Nous recyclons, par nos ateliers, dans nos décors, nous aimons transformer vos vieux objets et leur donner une seconde vie.
