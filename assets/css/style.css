@@ -28,6 +28,10 @@ body{
     display: inline-block;
     
 }
+.navCol{background-color: orange;
+    border-radius: 20px;}
+.navLink{color:#262626;}
+.navLink:hover{color:#FFDB96;background-color: #B27600;border-radius: 20px;}
 .navlinkcolor{color:#FFA000;}
 .navlinkcolor:hover{color: #FFA000;}
 .greenL{color:#99CC00;}
@@ -40,13 +44,12 @@ body{
     width:auto;
     max-height: 200px;
 }
-.rotation{border-radius: 50%;
-    -webkit-transition: -webkit-transform .8s ease-in-out;
-            transition:         transform .8s ease-in-out;}
-.rotation:before {
-    -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-  }
+.boxL{background-color: orange;
+padding: 15px;
+border-radius: 20%;
+color:#004AB2;}
+
+
 @media screen and (max-width: 575px)
 {
     .linebar{

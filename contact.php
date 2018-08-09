@@ -24,6 +24,24 @@
     ?>
     <section>
         <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navCol">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link navLink" href="#acces"><b>Accès</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navLink" href="#contact"><b>Contact</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navLink" href="#don"><b>Les Dons</b></a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row" id="acces">
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
@@ -68,7 +86,7 @@
             </div>
         </div>
         <hr>
-        <div class="row">
+        <div class="row" id="contact">
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
@@ -199,7 +217,7 @@
             </div>
         </div>
         <hr> -->
-        <div class="row">
+        <div class="row" id="don">
             <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
