@@ -91,8 +91,12 @@
                 </p>                    
             </div>
             <div class="col-md-12 col-lg-6">
-            
-            <img class="mx-auto d-block img-fluid" src="./assets/img/local.jpg" alt="local">
+                <figure>            
+                    <img class="mx-auto d-block img-fluid" src="./assets/img/local.jpg" alt="local">
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>
             </div>
         </div>
         <hr>
@@ -109,10 +113,20 @@
         </div>
         <div class="row">
             <div class="col-12">
-            <img class="mx-auto d-block img-fluid taillePhotoS animated rotateIn infinite" src="./assets/img/logoStage.png" alt="stage">
+                <figure>
+                    <img class="mx-auto d-block img-fluid taillePhotoS animated rotateIn infinite" src="./assets/img/logoStage.png" alt="stage">
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>       
             </div>
             <div class="col-md-12 col-lg-6">
-            <img class="mx-auto d-block img-fluid" src="./assets/img/StageSite.png" alt="stage">
+                <figure>
+                    <img class="mx-auto d-block img-fluid" src="./assets/img/StageSite.png" alt="stage">
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-md-12 col-lg-6">
                 <p>Un stage au Tilt, c’est une semaine à construire son projet, une invitation à la découverte du <b>monde</b> et des autres cultures.</p>
@@ -125,7 +139,12 @@
                 <p>Et surtout nous aimons faire les fous, nous sentir libres le nez en l’air et les cheveux au vent… Aller là où le groupe nous mène avec son énergie, feuilleter dans notre palette d’idées, aller fouiller le grenier, et les recoins de nos espaces pour créer et choisir une activité ou des missions qui nous plaisent  et nous rendent <b>heureux</b>.</p>
             </div>
             <div class="col-6">
-            <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/logoFouet.png" alt="fouet">
+                <figure>
+                    <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/logoFouet.png" alt="fouet">
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-6">
             <h5>Horaires</h5>
@@ -133,7 +152,12 @@
             Activités de 9h à 16h.</p>
             </div>
             <div class="col-6">
-            <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/logoCrayon.png" alt="Crayon"> 
+                <figure>
+                    <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/logoCrayon.png" alt="Crayon"> 
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-6">
             <h5>Tarifs</h5>
@@ -158,13 +182,28 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                    <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/stage-2016.jpg" alt="photo stage 1"> 
+                        <figure>
+                            <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/stage-2016.jpg" alt="photo stage 1"> 
+                            <figcaption>
+                                Crédits: Tilt asbl
+                            </figcaption>
+                        </figure>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                    <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/stage-2016-2.jpg" alt="photo stage 2"> 
+                        <figure>
+                            <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/stage-2016-2.jpg" alt="photo stage 2"> 
+                            <figcaption>
+                                Crédits: Tilt asbl
+                            </figcaption>
+                        </figure>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                    <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/stage-2016-3.jpg" alt="photo stage 3"> 
+                        <figure>
+                            <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/stage-2016-3.jpg" alt="photo stage 3"> 
+                            <figcaption>
+                                Crédits: Tilt asbl
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -183,7 +222,12 @@
         </div>
         <div class="row">
             <div class="col-12">
-            <img class="mx-auto d-block img-fluid" src="./assets/img/formation.jpg" alt="formation"> 
+                <figure>
+                    <img class="mx-auto d-block img-fluid" src="./assets/img/formation.jpg" alt="formation"> 
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-12">
             <p>Forts de notre expérience avec les groupes d’enfants et les familles, nous avons développé une série de méthodes pédagogiques et d’outils précieux dans le but de mettre le participant en situation de plaisir d’apprentissage. Nous souhaitons à présent partager cela en proposant des formations destinées aux adultes, professionnels de l’enfance qui souhaiteraient enrichir leurs capacités à faire émerger l’expression créative chez l’enfant.</p>
