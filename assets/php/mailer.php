@@ -65,7 +65,7 @@ if (isset ($message_raw) && empty($san_message)){
 
 
 // Exécution
-if (empty($errorEmail) && empty ($errorMessage) && empty($errorNom) && empty($errorPrenom) && empty($errorUpload)){
+if (isset ($nom_raw) && isset ($prenom_raw) && isset ($email_raw) && isset ($message_raw) && empty($errorEmail) && empty ($errorMessage) && empty($errorNom) && empty($errorPrenom) && empty($errorUpload)){
     include('phpmailer.php');
 };
 
