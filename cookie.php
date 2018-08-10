@@ -27,6 +27,7 @@
             setValue(bannerInputYes,"yes");
             setValue(bannerInputNo,"no");
             bannerLabel.setAttribute("for","cookie");
+            bannerLabel.innerHTML="Acceptez vous les cookies";
 
         }
 
