@@ -17,6 +17,23 @@
         include("./assets/vue/link.php")
     ?>
     <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" type="text/css" href="assets/css/cookieconsent.min.css" />
+    <script src="assets/js/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+    "palette": {
+        "popup": {
+        "background": "#000"
+        },
+        "button": {
+        "background": "transparent",
+        "text": "#f1d600",
+        "border": "#f1d600"
+        }
+    }
+    })});
+</script>
 </head>
 <body>
     <?php
