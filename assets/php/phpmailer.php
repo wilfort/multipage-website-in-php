@@ -18,7 +18,7 @@ $mail->isSMTP();
 // 0 = off (for production use)
 // 1 = client messages
 // 2 = client and server messages
-$mail->SMTPDebug = 2;
+//$mail->SMTPDebug = 2;
 $mail->Debugoutput = 'html';
 $mail->Host = 'smtp.gmail.com';
 $mail->Port = 587;
@@ -47,7 +47,7 @@ $mail->Body=$feedback."\n".$san_message;
 
 //Attach an image file
 if (empty($attachment)==false){
-$mail->addAttachment('assets/uploads/'.$attachment);
+$mail->addAttachment('/assets/uploads/'.$attachment);
 }
 //send the message, check for errors
 if (!$mail->send()) {
