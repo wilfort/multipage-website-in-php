@@ -28,6 +28,8 @@ body{
     display: inline-block;
     
 }
+.bouton{background-color: orange;
+    border-radius: 20px;}
 .navCol{background-color: orange;
     border-radius: 20px;}
 .navLink{color:#262626;}
