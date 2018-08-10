@@ -34,6 +34,7 @@
         if($fichierTXT=="oui"){
             $mail->addAttachment('./assets/message.txt');  
         }
+        echo $photo;
         $mail->addAttachment('./assets/uploads/'.$photo, $photo);
 
         $mail->isHTML(true);
