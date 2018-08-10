@@ -22,9 +22,9 @@
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
         //Username to use for SMTP authentication - use full email address for gmail
-        $mail->Username = getenv("user_mail");//$adminUser;
+        $mail->Username = $adminUser;//getenv("user_mail");
         //Password to use for SMTP authentication
-        $mail->Password = getenv("user_password");//$adminPWD;
+        $mail->Password = $adminPWD;//getenv("user_password");
         $mail->setFrom('dev.test.becode@gmail.com', 'Tilt asbl');
 
         $mail->addAddress($email, $nom." ".$prenom);
