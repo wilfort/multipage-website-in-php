@@ -37,7 +37,7 @@ $to_exclude = '/[!@#$%^&*(),.?":{}|<>] | [0-9]/';
 if (preg_match($to_exclude,$san_nom)!=false){
     $errorNom="<span class='erreur'>Ce nom est invalide.</span>";
 }
-else if (empty($san_nom)==true){
+else if (isset ($nom_raw) && empty($san_nom)==true){
     $errorNom="<span class='erreur'>Champ obligatoire.</span>";
 }
 
@@ -45,21 +45,21 @@ else if (empty($san_nom)==true){
 if (preg_match($to_exclude,$san_prenom)!=false){
     $errorPrenom="<span class='erreur'>Ce prénom est invalide.</span>";
 }
-else if (empty($san_prenom)==true){
+else if (isset ($prenom_raw) && empty($san_prenom)==true){
     $errorPrenom="<span class='erreur'>Champ obligatoire.</span>";
 }
 
 //Validation email
 $email=filter_var($san_email,FILTER_VALIDATE_EMAIL);
-if ($email==false){
+if (isset ($email_raw) && $email==false){
     $errorEmail="<span class='erreur'>Cette adresse est invalide.</span>";
 }
-else if (empty($email)==true){
+else if (isset ($email_raw) && empty($email)==true){
     $errorEmail="<span class='erreur'>Champ obligatoire.</span>";
 }
 
 //Validation message
-if (empty($san_message)){
+if (isset ($message_raw) && empty($san_message)){
     $errorMessage="<span class='erreur'>Champ obligatoire.</span>";
 }
 
