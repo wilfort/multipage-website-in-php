@@ -20,19 +20,6 @@ Log formulaire de contact
 31/07/2018 15:30:54 upload de spyKids.jpeg vers spyKids_1.jpeg
 31/07/2018 15:31:42 upload de spyKids.jpeg vers spyKids_2.jpeg
 31/07/2018 15:32:37 upload de spyKids.jpeg vers spyKids_3.jpeg
-<<<<<<< HEAD
-01/08/2018 07:53:29 upload de index.jpeg vers index_2.jpeg
-01/08/2018 07:53:35 upload de index.jpeg vers index_3.jpeg
-01/08/2018 08:23:00 upload de index.jpeg vers index_4.jpeg
-01/08/2018 08:26:23 upload de index.jpeg vers index_5.jpeg
-01/08/2018 13:22:24 upload de index.jpeg vers index_6.jpeg
-01/08/2018 19:57:16 upload de index.jpeg vers index_7.jpeg
-01/08/2018 20:00:51 upload de index.jpeg vers index_8.jpeg
-01/08/2018 21:05:50 upload de index.jpeg vers index_9.jpeg
-02/08/2018 08:56:25 upload de index.jpeg vers index_10.jpeg
-02/08/2018 08:58:20 upload de index.jpeg vers index_11.jpeg
-02/08/2018 09:28:36 upload de index.jpeg vers index_16.jpeg
-=======
 02/08/2018 08:23:44 upload de Peach Girl (Fini).jpg vers Peach-Girl-Fini.jpg
 02/08/2018 08:24:50 upload de Peach Girl (Fini).jpg vers Peach-Girl-Fini_1.jpg
 02/08/2018 08:25:06 upload de Peach Girl (Fini).jpg vers Peach-Girl-Fini_2.jpg
@@ -58,4 +45,3 @@ Log formulaire de contact
 02/08/2018 10:11:29 upload de Anatolia Story (Fini).jpg vers Anatolia-Story-Fini_3.jpg
 02/08/2018 10:15:17 upload de Peach Girl (Fini).jpg vers Peach-Girl-Fini_2.jpg
 02/08/2018 10:19:18 upload de Peach Girl (Fini).jpg vers Peach-Girl-Fini_3.jpg
->>>>>>> stephane

@@ -4,6 +4,7 @@
      //uncomment for version of mailer +upload by Son
      include ("assets/php/mailer.php");
     
+    
 
 ?>
 <!DOCTYPE html>
@@ -180,11 +181,12 @@
                         </div>
                         <div class="col-8">
                             <label for="privacy">Afin de répondre à votre requête, nous avons besoin de stocker votre adresse de messagerie ainsi que les messages et pièces jointes que vous nous envoyez. Ces données ne seront en aucun cas communiquées à des tiers ou utilisées à des fins de marketing. Acceptez-vous le stockage de ces données par le site?</label>
-                            <input type="radio" name="privacy" value="yes">oui</input>
-                            <input type="radio" name="privacy" value="no">non</input>
+                            <input type="radio" name="privacy" value="yes" id="yes">oui</input>
+                            <input type="radio" name="privacy" value="no" id ="no">non</input>
+                            
                         </div>
                         <div class="col-12">
-                            <button type="submit" name="envoie">Contactez-moi</button>
+                            <button type="submit" name="envoie" id="submit">Contactez-moi</button>
                         </div>
                     </div>
                 </form>
@@ -269,6 +271,9 @@
 
     <?php
         include("./assets/vue/footer.php");
+    ?>
+    <?php
+        include __DIR__.'/gdpr.php';
     ?>		
 </body>
 </html>
