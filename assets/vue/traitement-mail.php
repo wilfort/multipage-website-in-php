@@ -68,7 +68,6 @@
             $errors['prenom'] =  "Ce prénom est invalide.";
             $errorPrenom="<span class='erreur'>Ce prénom est invalide.</span>";
         }
-
         if ((false === filter_var($email, FILTER_VALIDATE_EMAIL)) OR (empty($email)==true)) {
             $errors['email'] =  "Cette adresse est invalide.";
             $errorEmail="<span class='erreur'>Cette adresse est invalide.</span>";
@@ -78,28 +77,21 @@
         $errors['message'] =  "Ce message est invalide.";
         $errorMessage="<span class='erreur'>Ce message est invalide.</span>";
         }
+        
         if (($formatUpload[1]!="jpg")and($formatUpload[1]!="jpeg")and($formatUpload[1]!="png")and($formatUpload[1]!="gif")) {
             $errors['format'] =  "Ce format pour l'upload est invalide.";
             $errorUpload="<span class='erreur'>Ce format pour l'upload est invalide.</span>";
-            }
+        }
+
         if($type=='HTML'){
             $fichierTXT="non";
             $donnerMessage="<p>".$genre." ".$nom." ".$prenom.",<br><br>je vous envoie à l'adresse suivant ".
             $email.",<br>le but de se message ".$objet.",<br>sur ".$message.",<br>et en piece jointe une photo.</p>";
         }else if($type=='Texte'){
             $fichierTXT="oui";
-            $donnerMessage="".$genre." ".$nom." ".$prenom."
-
-je vous envoie à l'adresse suivant ".
-            $email.",
-le but de se message ".$objet.",
-sur ".$message.",
-et en piece jointe une photo.";
-$handle = @fopen("./assets/message.txt", "w");
-
-  fwrite($handle, $donnerMessage);
-
-  fclose($handle);
+            $donnerMessage="".$genre." ".$nom." ".$prenom."je vous envoie à l'adresse suivant ".$email.",le but de se message ".$objet.",sur ".$message.",et en piece jointe une photo.";$handle = @fopen("./assets/message.txt", "w");
+            fwrite($handle, $donnerMessage);
+            fclose($handle);
         }
 
         if ($fileLogPresent=="NON"){
