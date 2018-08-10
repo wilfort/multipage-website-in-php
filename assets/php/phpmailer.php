@@ -47,7 +47,7 @@ $mail->Body=$feedback."\n".$san_message;
 
 //Attach an image file
 if (empty($attachment)==false){
-$mail->addAttachment('./assets/uploads/'.$attachment);
+$mail->addAttachment('assets/uploads/'.$attachment);
 }
 //send the message, check for errors
 if (!$mail->send()) {
