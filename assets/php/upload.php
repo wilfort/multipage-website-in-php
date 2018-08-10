@@ -1,7 +1,7 @@
 <?php
 
-require __DIR__.'/../../vendor/verot/class.upload.php/src/class.upload.php';
-// require './vendor/verot/class.upload.php/src/class.upload.php';
+// require __DIR__.'/../../vendor/verot/class.upload.php/src/class.upload.php';
+require './vendor/verot/class.upload.php/src/class.upload.php';
 function uploader (){
     $today= date('d/m/Y H:i:s');
     $handle = new upload($_FILES['upload']);
