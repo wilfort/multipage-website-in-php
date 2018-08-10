@@ -15,16 +15,16 @@
     require './vendor/autoload.php';
     $mail = new PHPMailer;
         
-        $mail->SMTPDebug = 2;
+        //$mail->SMTPDebug = 2;
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
         //Username to use for SMTP authentication - use full email address for gmail
-        $mail->Username = $id;//getenv("user_mail");
+        $mail->Username = getenv("user_mail");//$id;
         //Password to use for SMTP authentication
-        $mail->Password = $adminPWD;//getenv("user_password");
+        $mail->Password = getenv("user_password");//$adminPWD;
         $mail->setFrom('dev.test.becode@gmail.com', 'Tilt asbl');
 
         $mail->addAddress($email, $nom." ".$prenom);

@@ -1,5 +1,5 @@
 <?php 
-    $fileLogPresent="";
+    /*$fileLogPresent="";
     $phpLog="";
     if(file_exists ( './assets/vue/log.php' )===false){
         $fileLogPresent="NON";
@@ -18,12 +18,13 @@
                 <?=$errorPassword?>
                 </div>';
     }
-    else{$fileLogPresent="OUI";}
+    else{$fileLogPresent="OUI";}*/
     
     // echo $fileLogPresent;
-    $nom="";$prenom="";$email="";$message="";$id="";$password="";
+    $nom="";$prenom="";$email="";$message="";
+    // $id="";$password="";
     $errorNom=""; $errorPrenom=""; $errorEmail=""; $errorMessage="";
-    $errorUpload="";$errorEmailUser="";$errorPassword="";
+    // $errorUpload="";$errorEmailUser="";$errorPassword="";
     $checkNom=""; $checkPrenom="";$checkEmail="";$checkMessage="";
     if(isset($_POST['envoie'])){
         $formatUpload = explode('/', $_FILES['upload']['type']);
@@ -94,7 +95,7 @@
             fclose($handle);
         }
 
-        if ($fileLogPresent=="NON"){
+        /*if ($fileLogPresent=="NON"){
             $id = filter_var($_POST['user'], FILTER_SANITIZE_EMAIL);
             if ((false === filter_var($id, FILTER_VALIDATE_EMAIL)) OR (empty($id)==true)) {
                 $errors['emailUser'] =  "Cette adresse est invalide.";
@@ -107,7 +108,7 @@
                 }
 
 
-        }else{include('./assets/vue/log.php');}
+        }else{include('./assets/vue/log.php');}*/
         // 3. Exécution
         if (count($errors)=== 0){
             include("./assets/php/upload.php");

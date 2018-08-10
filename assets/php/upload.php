@@ -10,8 +10,8 @@ function uploader (){
     if ($handle->uploaded){
     //pour tester
     $formatUpload = explode('/', $handle->file_src_mime);
-       echo ("'".$formatUpload[0]."'<br>");
-        if ($handle->file_src_name_ext!='bmp'){//&& $handle->file_is_image =='true'
+    //    echo ("'".$formatUpload[0]."'<br>");
+        if ($handle->file_src_name_ext!='bmp' && $formatUpload[0]=="image"){//&& $handle->file_is_image =='true'
             $handle->process('./assets/uploads/');
            
             if ($handle->processed){
