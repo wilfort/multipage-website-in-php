@@ -10,6 +10,7 @@ The task is to redesign the website of a social non-profit into a 3 to 5 pages m
 [Full briefing (in French) here.](https://github.com/becodeorg/Johnson2/tree/master/projets/multipage-website-in-php)
 
 lien [heroku](https://multipage-website-letilt.herokuapp.com/).
+lien [form-logs.php](https://multipage-website-letilt.herokuapp.com/form-logs.php) pour qui affiche le contenu du log 
 
 2. Technical objectives
 - Use *DRY* coding
