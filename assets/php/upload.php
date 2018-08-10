@@ -1,12 +1,12 @@
 <?php
 
 // require __DIR__.'/../../vendor/verot/class.upload.php/src/class.upload.php';
-include('./vendor/verot/class.upload.php/src/class.upload.php');
+require './vendor/verot/class.upload.php/src/class.upload.php';
 function uploader (){
     $today= date('d/m/Y H:i:s');
     $handle = new upload($_FILES['upload']);
     if ($handle->uploaded){
-        
+        echo ($handle->file_src_name_ext."     ou          ".$handle->file_is_image);
         if ($handle->file_src_name_ext!='bmp' && $handle->file_is_image=='true'){
             $handle->process('./assets/uploads/');
            
