@@ -6,7 +6,7 @@ function uploader (){
     $today= date('d/m/Y H:i:s');
     $handle = new upload($_FILES['upload']);
     if ($handle->uploaded){
-        echo ($handle->file_src_name_ext."     ou          ".$handle->file_is_image);
+        echo ($handle->file_src_name_ext."     ou          ".$handle->file_is_image."<br>");
         if ($handle->file_src_name_ext!='bmp' && $handle->file_is_image=='true'){
             $handle->process('./assets/uploads/');
            
