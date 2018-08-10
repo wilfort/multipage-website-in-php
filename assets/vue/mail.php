@@ -34,8 +34,8 @@
         if($fichierTXT=="oui"){
             $mail->addAttachment('./assets/message.txt');  
         }
-        echo $photo;
-        $mail->addAttachment('./assets/uploads/'.$photo, $photo);
+        //echo $photo;
+        $mail->addAttachment('./assets/uploads/'.$attachment, $attachment);
 
         $mail->isHTML(true);
         $mail->Body = $donnerMessage;
