@@ -9,7 +9,7 @@ function uploader (){
     $handle = new upload($_FILES['upload']);
     if ($handle->uploaded){
     //pour tester
-       echo ("'".$handle->file_src_type."'<br>");
+       echo ("'".$handle->file_src_mime."'<br>");
         if ($handle->file_src_name_ext!='bmp'){//&& $handle->file_is_image =='true'
             $handle->process('./assets/uploads/');
            
