@@ -10,3 +10,29 @@
 <link rel="icon" type="image/png" href="./assets/img/logo.png" />
 <link rel="stylesheet" href="./assets/css/style.css">
 <link rel="stylesheet" href="./assets/css/carousel.css">
+<meta name="theme-color" content="#317EFB" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Le Tilt">
+	<link rel="apple-touch-icon" href="./assets/img/logo.png">
+    <meta name="msapplication-TileImage" content="./assets/img/logo.png">   
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+    
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" type="text/css" href="assets/css/cookieconsent.min.css" />
+    <script src="assets/js/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+    "palette": {
+        "popup": {
+        "background": "#000"
+        },
+        "button": {
+        "background": "transparent",
+        "text": "#f1d600",
+        "border": "#f1d600"
+        }
+    }
+    })});
+</script>

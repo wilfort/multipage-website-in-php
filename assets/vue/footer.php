@@ -126,16 +126,7 @@
     </div>
 </footer>
 <script src="./assets/js/carousel.js"></script>
-<script>if ('serviceWorker' in navigator) {
-  // window.addEventListener('load', function () {
-     navigator.serviceWorker.register('service-worker.js').then(function (registration) {
-       // Registration was successful
-       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-     }, function (err) {
-       // registration failed :(
-       console.log('ServiceWorker registration failed: ', err);
-     });
-   }</script>
+<script src="./assets/js/script.js"></script>
 
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"crossorigin="anonymous"></script>
