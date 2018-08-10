@@ -310,6 +310,10 @@ include("./assets/vue/header.php");
             <p>Plus concrètement, il s’agit d’un groupe de jeunes avec lequel on peut s’exprimer, parler de l’actualité, aider les autres, découvrir le monde, poser des questions, être soi-même, réaliser ses idées les plus folles, se construire…</p>
 
             <p>On se retrouve 7 dimanche par an au Tilt (ou ailleurs si précisé) de 10h30 à 16h30 avec notre pique-nique. Tu veux en faire partie ? Tu te sens l’âme d’un volontaire ? d’un explorateur ? N’hésite pas à t’inscrire en remplissant <a  href="./assets/doc/fiche-inscription-CGE-2016-2017.doc">la fiche d’inscription</a> à renvoyer à tilt.cge@gmail.be.</p>
+            <h5>Tarif:</h5>
+            <p>La journée/15 euros (10 euros pour le 2ème enfant de la famille)<br>
+            L’année/90 euros<br>
+            Le stage internat/185 euros</p>
 
 
         </div>
@@ -423,12 +427,10 @@ include("./assets/vue/header.php");
                 <div class="col-6">
                     <img  class="mx-auto d-block img-fluid" src="./assets/img/Bandeau-accessibilité-888x317.jpg" alt="Bandeau accessibilité">
                 </div>
-                <div class="col-12">
-                    Voyager au Tilt, c’est partir à la découverte des continents et s’ouvrir à la diversité grâce aux différentes animations proposées.Pour que la journée soit une réussite et que le rythme des enfants soit respecté, nous vous proposons de visiter trois continents et de sélectionner, dans chacun d’eux, une des animations proposées :<br>
-                </div>
-                <div class="col-12">
+                    <div class="col-12">
+                    <p>
                     Lors de votre visite chez nous, les enfants partent à la découverte du monde et de sa diversité.<br>
-                    Nous vous proposons un voyage d’une journée au sein de nos continents.<br>
+                    Nous vous proposons un voyage d’une journée au sein de nos continents.</p>
 
                     Afin de visiter notre espace, en fonction de vos élèves, de leur autonomie, nous vous demandons de nous contacter pour discuter ensemble de l’accompagnement qui leur conviendra. Un groupe de travail s’attèle au Tilt à rendre cet espace accessible, n’hésitez donc pas à le solliciter.<br>
 

@@ -111,7 +111,7 @@
             <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/logoFouet.png" alt="fouet">
             </div>
             <div class="col-6">
-            <h5><b>Horaires</b></h5>
+            <h5>Horaires</h5>
             <p>Garderie de 8h à 17h45<br>
             Activités de 9h à 16h.</p>
             </div>
@@ -119,7 +119,7 @@
             <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/logoCrayon.png" alt="Crayon"> 
             </div>
             <div class="col-6">
-            <h5><b>Tarifs</b></h5>
+            <h5>Tarifs</h5>
             <p>27 €/jour soit 135 €<span class="Cred">*</span> pour les stages d’une semaine / 108 €<span class="Cred">*</span> pour les semaines avec un jour férié.<br>
             10% de réduction à partir du 2ème enfant.<br>
             Tarif Article 27 disponible sur simple demande. Réduction de 5 euros pour les membres de la Ligue des familles.<br>
@@ -127,7 +127,7 @@
             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="Cred">*</span> Le montant de l’inscription ne doit pas être un frein à la participation.</p>
             </div>
             <div class="col-12">
-            <h5><b>Bon à savoir</b></h5>
+            <h5>Bon à savoir</h5>
                 <ul>
                 <li>En collaboration avec la <b>Bibliothèque</b> de Froidmont, nous passerons durant chaque stage un temps de conte et d’éveil à la lecture avec vos enfants.</li>
                 <li>Nos animateurs sont permanents, ils animent des groupes d’enfants toute l’année.</li>
