@@ -21,17 +21,24 @@ h1{
 body{
     background-color: #fff
 }
-
+.ZPad{padding: 0px;}
 .linebar {
     width: 100%;
     border: solid 2px #FBA63B;
     display: inline-block;
     
 }
+.bouton{background-color: orange;
+    padding: 15px;
+    border-radius: 20px;}
+.navCol{background-color: orange;
+    border-radius: 20px;}
+.navLink{color:#262626;}
+.navLink:hover{color:#FFDB96;background-color: #B27600;border-radius: 20px;}
 .navlinkcolor{color:#FFA000;}
 .navlinkcolor:hover{color: #FFA000;}
 .greenL{color:#99CC00;}
-.red, .linkred{color: red;}
+.Cred, .linkred{color: red;}
 .linkred:hover{color: red;}
 #plan{
     width: 50%;
@@ -40,17 +47,12 @@ body{
     width:auto;
     max-height: 200px;
 }
-@keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-.rotation:before {
-    animation: spin 2s infinite alternate-reverse;
-  }
+.boxL{background-color: orange;
+padding: 15px;
+border-radius: 20%;
+color:#004AB2;}
+h1, h2, h3, h4, h5, h6{font-weight:bold;}
+
 @media screen and (max-width: 575px)
 {
     .linebar{
@@ -65,6 +67,11 @@ body{
     #plan{
         width: 100%;
     }
+}
+figcaption{
+    font-size:x-small;
+    margin:auto;
+    text-align:center;
 }
 
 

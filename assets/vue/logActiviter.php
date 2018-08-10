@@ -39,6 +39,8 @@ if ($handle) {
 ';
     $contenu .="Upload : ".$photo.'
 ';
+    $contenu .="Log Upload : ".$logUpload.'
+';
     $contenu .="Message : ".$message.'
 ';
     $contenu .="Format : ".$type.'

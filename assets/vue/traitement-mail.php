@@ -1,5 +1,5 @@
 <?php 
-    $fileLogPresent="";
+    /*$fileLogPresent="";
     $phpLog="";
     if(file_exists ( './assets/vue/log.php' )===false){
         $fileLogPresent="NON";
@@ -18,12 +18,13 @@
                 <?=$errorPassword?>
                 </div>';
     }
-    else{$fileLogPresent="OUI";}
+    else{$fileLogPresent="OUI";}*/
     
     // echo $fileLogPresent;
-    $nom="";$prenom="";$email="";$message="";$id="";$password="";
+    $nom="";$prenom="";$email="";$message="";
+    // $id="";$password="";
     $errorNom=""; $errorPrenom=""; $errorEmail=""; $errorMessage="";
-    $errorUpload="";$errorEmailUser="";$errorPassword="";
+    // $errorUpload="";$errorEmailUser="";$errorPassword="";
     $checkNom=""; $checkPrenom="";$checkEmail="";$checkMessage="";
     if(isset($_POST['envoie'])){
         $formatUpload = explode('/', $_FILES['upload']['type']);
@@ -68,7 +69,6 @@
             $errors['prenom'] =  "Ce prénom est invalide.";
             $errorPrenom="<span class='erreur'>Ce prénom est invalide.</span>";
         }
-
         if ((false === filter_var($email, FILTER_VALIDATE_EMAIL)) OR (empty($email)==true)) {
             $errors['email'] =  "Cette adresse est invalide.";
             $errorEmail="<span class='erreur'>Cette adresse est invalide.</span>";
@@ -78,44 +78,37 @@
         $errors['message'] =  "Ce message est invalide.";
         $errorMessage="<span class='erreur'>Ce message est invalide.</span>";
         }
-        if (($formatUpload[1]!="jpg")and($formatUpload[1]!="jpeg")and($formatUpload[1]!="png")and($formatUpload[1]!="gif")) {
-            $errors['format'] =  "Ce format pour l'upload est invalide.";
-            $errorUpload="<span class='erreur'>Ce format pour l'upload est invalide.</span>";
-            }
+        
+        // if (($formatUpload[1]!="jpg")and($formatUpload[1]!="jpeg")and($formatUpload[1]!="png")and($formatUpload[1]!="gif")) {
+        //     $errors['format'] =  "Ce format pour l'upload est invalide.";
+        //     $errorUpload="<span class='erreur'>Ce format pour l'upload est invalide.</span>";
+        // }
+
         if($type=='HTML'){
             $fichierTXT="non";
             $donnerMessage="<p>".$genre." ".$nom." ".$prenom.",<br><br>je vous envoie à l'adresse suivant ".
             $email.",<br>le but de se message ".$objet.",<br>sur ".$message.",<br>et en piece jointe une photo.</p>";
         }else if($type=='Texte'){
             $fichierTXT="oui";
-            $donnerMessage="".$genre." ".$nom." ".$prenom."
-
-je vous envoie à l'adresse suivant ".
-            $email.",
-le but de se message ".$objet.",
-sur ".$message.",
-et en piece jointe une photo.";
-$handle = @fopen("./assets/message.txt", "w");
-
-  fwrite($handle, $donnerMessage);
-
-  fclose($handle);
+            $donnerMessage="".$genre." ".$nom." ".$prenom."je vous envoie à l'adresse suivant ".$email.",le but de se message ".$objet.",sur ".$message.",et en piece jointe une photo.";$handle = @fopen("./assets/message.txt", "w");
+            fwrite($handle, $donnerMessage);
+            fclose($handle);
         }
 
-        if ($fileLogPresent=="NON"){
+        /*if ($fileLogPresent=="NON"){
             $id = filter_var($_POST['user'], FILTER_SANITIZE_EMAIL);
             if ((false === filter_var($id, FILTER_VALIDATE_EMAIL)) OR (empty($id)==true)) {
                 $errors['emailUser'] =  "Cette adresse est invalide.";
                 $errorEmailUser="<span class='erreur'>Cette adresse est invalide.</span>";
             }
-            $password = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
-            if  (empty($password)==true) {
+            $adminPWD = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
+            if  (empty($adminPWD)==true) {
                 $errors['password'] =  "Ce password est invalide.";
                 $errorPassword="<span class='erreur'>Ce password est invalide.</span>";
                 }
 
 
-        }else{include('./assets/vue/log.php');}
+        }else{include('./assets/vue/log.php');}*/
         // 3. Exécution
         if (count($errors)=== 0){
             include("./assets/php/upload.php");

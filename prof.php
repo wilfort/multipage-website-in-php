@@ -9,6 +9,23 @@
     <?php 
         include("./assets/vue/link.php")
     ?>
+    <link rel="stylesheet" type="text/css" href="assets/css/cookieconsent.min.css" />
+    <script src="assets/js/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+    "palette": {
+        "popup": {
+        "background": "#000"
+        },
+        "button": {
+        "background": "transparent",
+        "text": "#f1d600",
+        "border": "#f1d600"
+        }
+    }
+    })});
+</script>
 </head>
 <body>
     <?php
@@ -18,13 +35,30 @@
     ?>
     <section>
         <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navCol">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link navLink" href="#Location"><b>Location</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navLink" href="#stages"><b>Les stages</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navLink" href="#Formations"><b>Formations</b></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row" id="Location">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Location</h1>
+                <h1 class="text-center Cred">Location</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
             <span class="linebar"></span>
             </div>
         </div>
@@ -57,28 +91,42 @@
                 </p>                    
             </div>
             <div class="col-md-12 col-lg-6">
-            
-            <img class="mx-auto d-block img-fluid" src="./assets/img/local.jpg" alt="local">
+                <figure>            
+                    <img class="mx-auto d-block img-fluid" src="./assets/img/local.jpg" alt="local">
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>
             </div>
         </div>
         <hr>
-        <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+        <div class="row" id="stages">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Les stages</h1>
+                <h1 class="text-center Cred">Les stages</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
             <span class="linebar"></span>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-            <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/logoStage.png" alt="stage">
+                <figure>
+                    <img class="mx-auto d-block img-fluid taillePhotoS animated rotateIn infinite" src="./assets/img/logoStage.png" alt="stage">
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>       
             </div>
             <div class="col-md-12 col-lg-6">
-            <img class="mx-auto d-block img-fluid" src="./assets/img/StageSite.png" alt="stage">
+                <figure>
+                    <img class="mx-auto d-block img-fluid" src="./assets/img/StageSite.png" alt="stage">
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-md-12 col-lg-6">
                 <p>Un stage au Tilt, c’est une semaine à construire son projet, une invitation à la découverte du <b>monde</b> et des autres cultures.</p>
@@ -91,26 +139,36 @@
                 <p>Et surtout nous aimons faire les fous, nous sentir libres le nez en l’air et les cheveux au vent… Aller là où le groupe nous mène avec son énergie, feuilleter dans notre palette d’idées, aller fouiller le grenier, et les recoins de nos espaces pour créer et choisir une activité ou des missions qui nous plaisent  et nous rendent <b>heureux</b>.</p>
             </div>
             <div class="col-6">
-            <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/logoFouet.png" alt="fouet">
+                <figure>
+                    <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/logoFouet.png" alt="fouet">
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-6">
-            <h5><b>Horaires</b></h5>
+            <h5>Horaires</h5>
             <p>Garderie de 8h à 17h45<br>
             Activités de 9h à 16h.</p>
             </div>
             <div class="col-6">
-            <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/logoCrayon.png" alt="Crayon"> 
+                <figure>
+                    <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/logoCrayon.png" alt="Crayon"> 
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-6">
-            <h5><b>Tarifs</b></h5>
-            <p>27 €/jour soit 135 €<span class="red">*</span> pour les stages d’une semaine / 108 €<span class="red">*</span> pour les semaines avec un jour férié.<br>
+            <h5>Tarifs</h5>
+            <p>27 €/jour soit 135 €<span class="Cred">*</span> pour les stages d’une semaine / 108 €<span class="Cred">*</span> pour les semaines avec un jour férié.<br>
             10% de réduction à partir du 2ème enfant.<br>
             Tarif Article 27 disponible sur simple demande. Réduction de 5 euros pour les membres de la Ligue des familles.<br>
             Garderie : 2 euros par famille par garderie.<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="red">*</span> Le montant de l’inscription ne doit pas être un frein à la participation.</p>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="Cred">*</span> Le montant de l’inscription ne doit pas être un frein à la participation.</p>
             </div>
             <div class="col-12">
-            <h5><b>Bon à savoir</b></h5>
+            <h5>Bon à savoir</h5>
                 <ul>
                 <li>En collaboration avec la <b>Bibliothèque</b> de Froidmont, nous passerons durant chaque stage un temps de conte et d’éveil à la lecture avec vos enfants.</li>
                 <li>Nos animateurs sont permanents, ils animent des groupes d’enfants toute l’année.</li>
@@ -124,37 +182,57 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                    <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/stage-2016.jpg" alt="photo stage 1"> 
+                        <figure>
+                            <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/stage-2016.jpg" alt="photo stage 1"> 
+                            <figcaption>
+                                Crédits: Tilt asbl
+                            </figcaption>
+                        </figure>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                    <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/stage-2016-2.jpg" alt="photo stage 2"> 
+                        <figure>
+                            <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/stage-2016-2.jpg" alt="photo stage 2"> 
+                            <figcaption>
+                                Crédits: Tilt asbl
+                            </figcaption>
+                        </figure>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                    <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/stage-2016-3.jpg" alt="photo stage 3"> 
+                        <figure>
+                            <img class="mx-auto d-block img-fluid taillePhotoS" src="./assets/img/stage-2016-3.jpg" alt="photo stage 3"> 
+                            <figcaption>
+                                Crédits: Tilt asbl
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
         </div>
         <hr>
-        <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+        <div class="row" id="Formations">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Formations</h1>
+                <h1 class="text-center Cred">Formations</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
             <span class="linebar"></span>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-            <img class="mx-auto d-block img-fluid" src="./assets/img/formation.jpg" alt="formation"> 
+                <figure>
+                    <img class="mx-auto d-block img-fluid" src="./assets/img/formation.jpg" alt="formation"> 
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-12">
             <p>Forts de notre expérience avec les groupes d’enfants et les familles, nous avons développé une série de méthodes pédagogiques et d’outils précieux dans le but de mettre le participant en situation de plaisir d’apprentissage. Nous souhaitons à présent partager cela en proposant des formations destinées aux adultes, professionnels de l’enfance qui souhaiteraient enrichir leurs capacités à faire émerger l’expression créative chez l’enfant.</p>
 
-<p><span class="red">« Je n’ai aucun talent », « je n’ai pas d’imagination »</span>. Nous débattrons sur ces phrases si souvent entendues et nous apprendrons à faire connaissance avec notre potentiel créatif pour encourager son émergence. Un temps pour sortir de ses habitudes et ainsi vivre sa créativité pour mieux la cerner. Par le partage, l’expérimentation, le jeu, l’échange… Nous approcherons l’expression créative de manière individuelle et collective.</p>
+<p><span class="Cred">« Je n’ai aucun talent », « je n’ai pas d’imagination »</span>. Nous débattrons sur ces phrases si souvent entendues et nous apprendrons à faire connaissance avec notre potentiel créatif pour encourager son émergence. Un temps pour sortir de ses habitudes et ainsi vivre sa créativité pour mieux la cerner. Par le partage, l’expérimentation, le jeu, l’échange… Nous approcherons l’expression créative de manière individuelle et collective.</p>
 
 <p>1. <b>« Les indispensables de la créativité »</b></p>
 <p>Par des jeux et des réflexions de groupes, les participants seront amenés à réfléchir à la créativité et à comment ils la pratiquent dans leur travail. Ils seront ensuite amenés à participer à des ateliers animés, pour être plongé dans leur propre potentiel créatif. Ils pourront dès lors analyser les étapes et les démarches que le formateur à mis en place, ainsi que les outils et les médiums utilisés lors des ateliers.</p>

@@ -15,23 +15,27 @@
     require './vendor/autoload.php';
     $mail = new PHPMailer;
         
-        $mail->SMTPDebug = 2;
+        //$mail->SMTPDebug = 2;
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = false;
-        $mail->SMTPSecure = false;
-        $mail->Port = 25;
-        $mail->Username = $id;
-        // $mail->Password = $password;
-        $mail->setFrom('wilfort.stephane@gmail.com', 'Wilfort Stephane');
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+        //Username to use for SMTP authentication - use full email address for gmail
+        $mail->Username = getenv("user_mail");//$id;
+        //Password to use for SMTP authentication
+        $mail->Password = getenv("user_password");//$adminPWD;
+        $mail->setFrom('dev.test.becode@gmail.com', 'Tilt asbl');
 
         $mail->addAddress($email, $nom." ".$prenom);
-        $mail->addAddress('wilfort.stephane@gmail.com', 'Wilfort Stephane');         
+        $mail->addAddress('wilfort.stephane@gmail.com', 'Wilfort Stephane');
+        $mail->addCC('dev.test.becode@gmail.com','Tilt asbl');         
         $mail->Subject = $objet;
         if($fichierTXT=="oui"){
             $mail->addAttachment('./assets/message.txt');  
         }
-        $mail->addAttachment('./assets/uploads/'.$photo, $photo);
+        //echo $photo;
+        $mail->addAttachment('./assets/uploads/'.$attachment, $attachment);
 
         $mail->isHTML(true);
         $mail->Body = $donnerMessage;

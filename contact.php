@@ -1,7 +1,10 @@
 <?php
-
-     include("./assets/vue/traitement-mail.php");
+     //uncomment for Steaphane's version of phpmailer
+    include ("assets/vue/traitement-mail.php");
+     //uncomment for version of mailer +upload by Son
     
+    // include ("/assets/php/mailer.php");
+    // include ("/assets/php/upload.php");
 
 ?>
 <!DOCTYPE html>
@@ -15,6 +18,23 @@
     <?php 
         include("./assets/vue/link.php")
     ?>
+    <link rel="stylesheet" type="text/css" href="assets/css/cookieconsent.min.css" />
+    <script src="assets/js/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+    "palette": {
+        "popup": {
+        "background": "#000"
+        },
+        "button": {
+        "background": "transparent",
+        "text": "#f1d600",
+        "border": "#f1d600"
+        }
+    }
+    })});
+</script>
 </head>
 <body>
     <?php
@@ -24,13 +44,31 @@
     ?>
     <section>
         <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navCol">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link navLink" href="#acces"><b>Accès</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navLink" href="#contact"><b>Contact</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navLink" href="#don"><b>Les Dons</b></a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row" id="acces">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Accès</h1>
+                <h1 class="text-center Cred">Accès</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
             <span class="linebar"></span>
             </div>
         </div>
@@ -68,14 +106,14 @@
             </div>
         </div>
         <hr>
-        <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+        <div class="row" id="contact">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Contact</h1>
+                <h1 class="text-center Cred">Contact</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
             <span class="linebar"></span>
             </div>
         </div>
@@ -158,9 +196,14 @@
                             <input type="radio" name="type" id="HTML" value="HTML" checked> <label for="HTML">HTML</label>
                             <input type="radio" name="type" id="Texte" value="Texte"> <label for="Texte">Texte</label>
                         </div>
-
+                        <div class="col-8">
+                            <label for="privacy">Afin de répondre à votre requête, nous avons besoin de stocker votre adresse de messagerie ainsi que les messages et pièces jointes que vous nous envoyez. Ces données ne seront en aucun cas communiquées à des tiers ou utilisées à des fins de marketing. Acceptez-vous le stockage de ces données par le site?</label>
+                            <input type="radio" name="privacy" value="yes" id="yes">oui</input>
+                            <input type="radio" name="privacy" value="no" id ="no">non</input>
+                            
+                        </div>
                         <div class="col-12">
-                            <button type="submit" name="envoie">Contactez-moi</button>
+                            <button type="submit" name="envoie" id="submit">Contactez-moi</button>
                         </div>
                     </div>
                 </form>
@@ -168,13 +211,13 @@
         </div>
         <hr>
         <!-- <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Bon à savoir !</h1>
+                <h1 class="text-center Cred">Bon à savoir !</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
             <span class="linebar"></span>
             </div>
         </div>
@@ -199,23 +242,28 @@
             </div>
         </div>
         <hr> -->
-        <div class="row">
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+        <div class="row" id="don">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 my-auto">
-                <h1 class="text-center red">Nous avons besoin de dons pour vivre.</h1>
+                <h1 class="text-center Cred">Nous avons besoin de dons pour vivre.</h1>
             </div>
-            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3 my-auto ZPad">
                 <span class="linebar"></span>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center red">Don financier</h1>
+                <h1 class="text-center Cred">Don financier</h1>
             </div>
             <div class="col-12">
-                <img class="mx-auto d-block img-fluid" src="./assets/img/presentation.jpg" alt="">
+                <figure>
+                    <img class="mx-auto d-block img-fluid" src="./assets/img/presentation.jpg" alt="">
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-12">
                 Vous avez envie de faire un don à une association ? Un projet qui a du sens, qui poursuit une mission auprès des jeunes, qui les pousse à réfléchir et qui favorise leur ouverture d’esprit ? Les dons faits à la Fondation donnent droit à <b>une attestation fiscale à partir de € 40</b> (art. 145/33 CIR).
@@ -234,7 +282,7 @@
                 </ul>
             </div>
             <div class="col-12">
-                <h1 class="text-center red">Don matériel</h1>
+                <h1 class="text-center Cred">Don matériel</h1>
             </div>
             <div class="col-12">
                 Vous videz votre maison, vous terminez une activité, vous avez des objets de décoration à donner, du papier de dessin, du matériel d’animation à donner, des atlas, des cartes routières, des bijoux de fantaisie ? Vous ne voulez pas jeter ? Nous recyclons, par nos ateliers, dans nos décors, nous aimons transformer vos vieux objets et leur donner une seconde vie.
@@ -245,6 +293,9 @@
 
     <?php
         include("./assets/vue/footer.php");
+    ?>
+    <?php
+        include __DIR__.'/gdpr.php';
     ?>		
 </body>
 </html>
