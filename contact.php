@@ -1,8 +1,8 @@
 <?php
      //uncomment for Steaphane's version of phpmailer
-    //  include("assets/vue/traitement-mail.php");
+     include("assets/vue/traitement-mail.php");
      //uncomment for version of mailer +upload by Son
-     include ("assets/php/mailer.php");
+     //include ("assets/php/mailer.php");
     
     
 
@@ -258,7 +258,12 @@
                 <h1 class="text-center Cred">Don financier</h1>
             </div>
             <div class="col-12">
-                <img class="mx-auto d-block img-fluid" src="./assets/img/presentation.jpg" alt="presentation">
+                <figure>
+                    <img class="mx-auto d-block img-fluid" src="./assets/img/presentation.jpg" alt="">
+                    <figcaption>
+                        Crédits: Tilt asbl
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-12">
                 Vous avez envie de faire un don à une association ? Un projet qui a du sens, qui poursuit une mission auprès des jeunes, qui les pousse à réfléchir et qui favorise leur ouverture d’esprit ? Les dons faits à la Fondation donnent droit à <b>une attestation fiscale à partir de € 40</b> (art. 145/33 CIR).

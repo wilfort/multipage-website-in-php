@@ -317,7 +317,16 @@ include("./assets/vue/header.php");
             <span class="linebar"></span>
         </div>  
     </div>
-    <div class="row"><div class="col-12"><img class="mx-auto d-block img-fluid" src="./assets/img/Groupe-1-Petit-888x317.jpg" alt="La Cellule des Grands Explorateurs"></div></div>
+    <div class="row">
+        <div class="col-12">
+            <figure>
+                <img class="mx-auto d-block img-fluid" src="./assets/img/Groupe-1-Petit-888x317.jpg" alt="La Cellule des Grands Explorateurs">
+                <figcaption>
+                    Crédits: Tilt asbl
+                </figcaption>
+            </figure>
+        </div>
+    </div>
     <div class="row">
         <div class="col-12">
             <p>La CGE « Cellule des grands explorateurs » est née d’un rêve un peu fou qui est celui de voir ces jeunes grandir avec le projet de se construire grâce à l’espace de parole, d’expression, de réflexion et d’action qu’offre le Tilt, de le modeler avec son époque et son univers.</p>
@@ -349,7 +358,13 @@ include("./assets/vue/header.php");
     </div>
     <div class="row">
         <div class="col-12">
-            <img class="mx-auto d-block img-fluid" src="./assets/img/Visite-ecole-maternelle-14102011-026-copie-1024x6851-888x317.jpg" alt="Visite ecole maternelle"></div>
+            <figure>
+                <img class="mx-auto d-block img-fluid" src="./assets/img/Visite-ecole-maternelle-14102011-026-copie-1024x6851-888x317.jpg" alt="Visite ecole maternelle">
+                <figcaption>
+                    Crédits: Tilt asbl
+                </figcaption>
+            </figure>
+        </div>
         <div class="col-12">
             <p>
                 « Impressionne-toi »
@@ -414,7 +429,12 @@ include("./assets/vue/header.php");
     </div>
     <div class="row">
         <div class="col-12">
-            <img class="mx-auto d-block img-fluid" src="./assets/img/Entrée-du-tilt-e1474556720214-888x317.jpg" alt="Entrée du tilt">
+            <figure>
+                <img class="mx-auto d-block img-fluid" src="./assets/img/Entrée-du-tilt-e1474556720214-888x317.jpg" alt="Entrée du tilt">
+                <figcaption>
+                    Crédits: Tilt asbl
+                </figcaption>
+            </figure>
         </div>
         <div class="col-12">
             <p>
@@ -439,10 +459,20 @@ include("./assets/vue/header.php");
                     </div>
                 </div>
                 <div class="col-6">
-                    <img class="mx-auto d-block img-fluid" src="./assets/img/Les-classes-maternelles.jpg" alt="Les classes maternelles">
+                    <figure>
+                        <img class="mx-auto d-block img-fluid" src="./assets/img/Les-classes-maternelles.jpg" alt="Les classes maternelles">
+                        <figcaption>
+                        Crédits: Tilt asbl
+                        </figcaption>
+                    </figure>   
                 </div>
                 <div class="col-6">
-                    <img  class="mx-auto d-block img-fluid" src="./assets/img/Bandeau-accessibilité-888x317.jpg" alt="Bandeau accessibilité">
+                    <figure>
+                        <img  class="mx-auto d-block img-fluid" src="./assets/img/Bandeau-accessibilité-888x317.jpg" alt="Bandeau accessibilité">
+                        <figcaption>
+                            Crédits: Tilt asbl
+                        </figcaption>
+                    </figure>
                 </div>
                     <div class="col-12">
                     <p>
@@ -604,7 +634,12 @@ include("./assets/vue/header.php");
                     </div>
                 </div>
                 <div class="col-12">
-                    <img class="mx-auto d-block img-fluid" src="./assets/img/Bandeau-Primaire-1024x470.jpg" alt="Les classes de Primaire">
+                    <figure>
+                        <img class="mx-auto d-block img-fluid" src="./assets/img/Bandeau-Primaire-1024x470.jpg" alt="Les classes de Primaire">
+                        <figcaption>
+                                Crédits: Tilt asbl
+                        </figcaption>
+                    </figure>    
                 </div>
                 <div class="col-12">
                     <div class="row">
@@ -654,7 +689,12 @@ include("./assets/vue/header.php");
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <img class="mx-auto d-block img-fluid" src="./assets/img/Schémas-le-monde-en-projet.jpg" alt="Schémas le monde en projet">
+                            <figure>
+                                <img class="mx-auto d-block img-fluid" src="./assets/img/Schémas-le-monde-en-projet.jpg" alt="Schémas le monde en projet">
+                                <figcaption>
+                                    Crédits: Tilt asbl
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                     <div class="row">
@@ -669,7 +709,12 @@ include("./assets/vue/header.php");
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <img class="mx-auto d-block img-fluid" src="./assets/img/Bande-Citoyen-en-action.jpg" alt="Bande Citoyen en action">
+                            <figure>
+                                <img class="mx-auto d-block img-fluid" src="./assets/img/Bande-Citoyen-en-action.jpg" alt="Bande Citoyen en action">
+                                <figcaption>
+                                    Crédits: Tilt asbl
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                     <div class="row">

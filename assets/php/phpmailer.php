@@ -26,9 +26,9 @@ $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
 
 //Username to use for SMTP authentication - use full email address for gmail
-$mail->Username = 'dev.test.becode@gmail.com';//$adminUser;
+$mail->Username = getenv("user_mail");//$adminUser;
 //Password to use for SMTP authentication
-$mail->Password = 'Adresse;Test';//$adminPWD;
+$mail->Password = getenv("user_password");//$adminPWD;
 
 
 $mail->setFrom('dev.test.becode@gmail.com', 'Tilt asbl');
