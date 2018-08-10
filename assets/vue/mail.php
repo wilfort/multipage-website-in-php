@@ -8,25 +8,25 @@
     //Import PHPMailer classes into the global namespace
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
-    include('./assets/vue/log.php');
+    
     // require 'path/to/PHPMailer/src/Exception.php';
     // require 'path/to/PHPMailer/src/PHPMailer.php';
     // require 'path/to/PHPMailer/src/SMTP.php';
     require './vendor/autoload.php';
     $mail = new PHPMailer;
         
-        // $mail->SMTPDebug = 2;
+        $mail->SMTPDebug = 2;
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->SMTPSecure = 'ssl';
-        $mail->Port = 465;
+        $mail->SMTPAuth = false;
+        $mail->SMTPSecure = false;
+        $mail->Port = 25;
         $mail->Username = $id;
-        $mail->Password = $password;
+        // $mail->Password = $password;
         $mail->setFrom('wilfort.stephane@gmail.com', 'Wilfort Stephane');
 
         $mail->addAddress($email, $nom." ".$prenom);
-
+        $mail->addAddress('wilfort.stephane@gmail.com', 'Wilfort Stephane');         
         $mail->Subject = $objet;
         if($fichierTXT=="oui"){
             $mail->addAttachment('./assets/message.txt');  

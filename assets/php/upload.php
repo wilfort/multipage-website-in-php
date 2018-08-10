@@ -24,6 +24,7 @@ function uploader (){
             global $errorUpload;
             $errorUpload= "<span class='erreur'>Type de fichier non supporté.</span>";
             file_put_contents('./assets/logUploads.txt',$today.' upload de '.$handle->file_src_name.':fichier non-supporté '."\n",FILE_APPEND);
+            $logUpload=$today.' upload de '.$handle->file_src_name.':fichier non-supporté.';
         }
     }
 }

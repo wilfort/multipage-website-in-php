@@ -1,11 +1,33 @@
 <?php 
+    $fileLogPresent="";
+    $phpLog="";
+    if(file_exists ( './assets/vue/log.php' )===false){
+        $fileLogPresent="NON";
+        $phpLog='<div class="col-md-12 col-lg-4">
+                <label for="user">USER GMAIL</label></div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                <input type="text" name="user" id="user"></div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                        <?=$errorEmailUser?>
+                        </div>
+                <div class="col-md-12 col-lg-4">
+                <label for="password">PASSWORD GMAIL</label></div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                <input type="password" name="password" id="password"></div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                <?=$errorPassword?>
+                </div>';
+    }
+    else{$fileLogPresent="OUI";}
     
-    $formatUpload = explode('/', $_FILES['upload']['type']);
-    $nom="";$prenom="";$email="";$message="";
+    // echo $fileLogPresent;
+    $nom="";$prenom="";$email="";$message="";$id="";$password="";
     $errorNom=""; $errorPrenom=""; $errorEmail=""; $errorMessage="";
+    $errorUpload="";$errorEmailUser="";$errorPassword="";
     $checkNom=""; $checkPrenom="";$checkEmail="";$checkMessage="";
     if(isset($_POST['envoie'])){
-    // print_r($_FILES['upload']);
+        $formatUpload = explode('/', $_FILES['upload']['type']);
+        // print_r($_FILES['upload']);
         // on initie un tableau qui va contenir toute erreur potentielle.
         $errors = array();
         // 1. Sanitisation
@@ -14,7 +36,7 @@
         $nom = filter_var($_POST['nom'],FILTER_SANITIZE_STRING);
         $chifNom = "".filter_var($nom,FILTER_SANITIZE_NUMBER_INT)."";
         $checkNom = "value='". $nom."'";
-// echo $chifNom;
+        // echo $chifNom;
         $prenom = filter_var($_POST['prenom'],FILTER_SANITIZE_STRING);
         $chifPrenom = "".filter_var($prenom,FILTER_SANITIZE_NUMBER_INT)."";
         $checkPrenom = "value='". $prenom."'";
@@ -35,16 +57,14 @@
         // Prints int(1).
         if (
             ((empty($chifNom)===false or $chifNom=='0'))
-            
-            OR (false === filter_var($nom, FILTER_VALIDATE_STRING)) OR (empty($nom)===true)) {
+             OR (empty($nom)===true)) {
             $errors['nom'] =  "Ce nom est invalide.";
             $errorNom="<span class='erreur'>Ce nom est invalide.</span>";
             }
 
-        if ((empty($chifPrenom)===false or $chifPrenom=='0') OR 
-            (false === filter_var($prenom, FILTER_VALIDATE_STRING)) OR 
-            (empty($prenom)===true)) 
-        {
+        if (
+            (empty($chifPrenom)===false or $chifPrenom=='0')
+         OR (empty($prenom)===true)) {
             $errors['prenom'] =  "Ce prénom est invalide.";
             $errorPrenom="<span class='erreur'>Ce prénom est invalide.</span>";
         }
@@ -52,9 +72,10 @@
             $errors['email'] =  "Cette adresse est invalide.";
             $errorEmail="<span class='erreur'>Cette adresse est invalide.</span>";
         }
-        if ((false === filter_var($message, FILTER_VALIDATE_STRING)) OR (empty($message)==true)) {
-            $errors['message'] =  "Ce message est invalide.";
-            $errorMessage="<span class='erreur'>Ce message est invalide.</span>";
+
+        if ((empty($message)==true)) {
+        $errors['message'] =  "Ce message est invalide.";
+        $errorMessage="<span class='erreur'>Ce message est invalide.</span>";
         }
         
         if (($formatUpload[1]!="jpg")and($formatUpload[1]!="jpeg")and($formatUpload[1]!="png")and($formatUpload[1]!="gif")) {
@@ -72,14 +93,30 @@
             fwrite($handle, $donnerMessage);
             fclose($handle);
         }
+
+        if ($fileLogPresent=="NON"){
+            $id = filter_var($_POST['user'], FILTER_SANITIZE_EMAIL);
+            if ((false === filter_var($id, FILTER_VALIDATE_EMAIL)) OR (empty($id)==true)) {
+                $errors['emailUser'] =  "Cette adresse est invalide.";
+                $errorEmailUser="<span class='erreur'>Cette adresse est invalide.</span>";
+            }
+            $password = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
+            if  (empty($password)==true) {
+                $errors['password'] =  "Ce password est invalide.";
+                $errorPassword="<span class='erreur'>Ce password est invalide.</span>";
+                }
+
+
+        }else{include('./assets/vue/log.php');}
         // 3. Exécution
         if (count($errors)=== 0){
             include("./assets/php/upload.php");
             include("./assets/vue/logActiviter.php");
             include("./assets/vue/mail.php");
+            unset($mail);
         }
         
-
+        unset($_POST);
         
     
     }
