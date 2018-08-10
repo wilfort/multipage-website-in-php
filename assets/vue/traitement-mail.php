@@ -78,10 +78,10 @@
         $errorMessage="<span class='erreur'>Ce message est invalide.</span>";
         }
         
-        if (($formatUpload[1]!="jpg")and($formatUpload[1]!="jpeg")and($formatUpload[1]!="png")and($formatUpload[1]!="gif")) {
-            $errors['format'] =  "Ce format pour l'upload est invalide.";
-            $errorUpload="<span class='erreur'>Ce format pour l'upload est invalide.</span>";
-        }
+        // if (($formatUpload[1]!="jpg")and($formatUpload[1]!="jpeg")and($formatUpload[1]!="png")and($formatUpload[1]!="gif")) {
+        //     $errors['format'] =  "Ce format pour l'upload est invalide.";
+        //     $errorUpload="<span class='erreur'>Ce format pour l'upload est invalide.</span>";
+        // }
 
         if($type=='HTML'){
             $fichierTXT="non";
