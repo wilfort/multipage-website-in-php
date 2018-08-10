@@ -29,6 +29,7 @@ body{
     
 }
 .bouton{background-color: orange;
+    padding: 15px;
     border-radius: 20px;}
 .navCol{background-color: orange;
     border-radius: 20px;}

@@ -75,7 +75,7 @@
             </div>
             <div class="col-12 my-auto text-center">
                 <figure>
-                    <video width="360" height="280" controls>
+                    <video width="360" height="280" controls="controls">
                         <source src="./assets/video/video-presentation-du-tilt.mp4" type="video/mp4">
                     </video>
                     <figcaption>Le Tilt ASBL </figcaption> 
@@ -109,7 +109,10 @@
                             <b>Ecole</b>
                         </li>
                     </ul>
+                    <br>
                     <a class="bouton" href="enfant.php">Pour plus information</a>
+                    <br>
+                    <br>
                 </div>
             </div>
             <div class="col-sm-6 offset-sm-3 col-md-4 offset-md-0 col-lg-4 ">
@@ -126,7 +129,10 @@
                             <b>Formations</b>
                         </li>
                     </ul>
+                    <br>
                     <a class="bouton" href="prof.php">Pour plus information</a>
+                    <br>
+                    <br>
                 </div>
             </div>
         </div>
