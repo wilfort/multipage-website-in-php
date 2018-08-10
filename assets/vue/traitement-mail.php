@@ -100,8 +100,8 @@
                 $errors['emailUser'] =  "Cette adresse est invalide.";
                 $errorEmailUser="<span class='erreur'>Cette adresse est invalide.</span>";
             }
-            $password = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
-            if  (empty($password)==true) {
+            $adminPWD = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
+            if  (empty($adminPWD)==true) {
                 $errors['password'] =  "Ce password est invalide.";
                 $errorPassword="<span class='erreur'>Ce password est invalide.</span>";
                 }
