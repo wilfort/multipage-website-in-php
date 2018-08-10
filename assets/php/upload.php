@@ -7,7 +7,7 @@ function uploader (){
     $handle = new upload($_FILES['upload']);
     if ($handle->uploaded){
         echo ($handle->file_src_name_ext."     ou         1 1".$handle->file_is_image."1<br>");
-        if ($handle->file_src_name_ext!='bmp' && $handle->file_is_image=='true'){
+        if ($handle->file_src_name_ext!='bmp'){//&& $handle->file_is_image=='true'
             $handle->process('./assets/uploads/');
            
             if ($handle->processed){
