@@ -1,6 +1,6 @@
 // if ('serviceWorker' in navigator) {
 //    window.addEventListener('load', function () {
-//      navigator.serviceWorker.register('./assets/js/service-worker.js').then(function (registration) {
+//      navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
 //        // Registration was successful
 //        console.log('ServiceWorker registration successful with scope: ', registration.scope);
 //      }, function (err) {
@@ -11,6 +11,6 @@
 //   }
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-             .register('./service-worker.js')
+             .register('service-worker.js')
              .then(function() { console.log('Service Worker Registered'); });
   }
