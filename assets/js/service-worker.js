@@ -1,3 +1,88 @@
+if (!Cache.prototype.add) {
+  Cache.prototype.add = function add(request) {
+    return this.addAll([request]);
+  };
+}
+
+if (!Cache.prototype.addAll) {
+  Cache.prototype.addAll = function addAll(requests) {
+    var cache = this;
+
+    // Since DOMExceptions are not constructable:
+    function NetworkError(message) {
+      this.name = 'NetworkError';
+      this.code = 19;
+      this.message = message;
+    }
+    NetworkError.prototype = Object.create(Error.prototype);
+
+    return Promise.resolve().then(function() {
+      if (arguments.length < 1) throw new TypeError();
+
+      // Simulate sequence<(Request or USVString)> binding:
+      var sequence = [];
+
+      requests = requests.map(function(request) {
+        if (request instanceof Request) {
+          return request;
+        }
+        else {
+          return String(request); // may throw TypeError
+        }
+      });
+
+      return Promise.all(
+        requests.map(function(request) {
+          if (typeof request === 'string') {
+            request = new Request(request);
+          }
+
+          var scheme = new URL(request.url).protocol;
+
+          if (scheme !== 'http:' && scheme !== 'https:') {
+            throw new NetworkError("Invalid scheme");
+          }
+
+          return fetch(request.clone());
+        })
+      );
+    }).then(function(responses) {
+      // TODO: check that requests don't overwrite one another
+      // (don't think this is possible to polyfill due to opaque responses)
+      return Promise.all(
+        responses.map(function(response, i) {
+          return cache.put(requests[i], response);
+        })
+      );
+    }).then(function() {
+      return undefined;
+    });
+  };
+}
+
+if (!CacheStorage.prototype.match) {
+  // This is probably vulnerable to race conditions (removing caches etc)
+  CacheStorage.prototype.match = function match(request, opts) {
+    var caches = this;
+
+    return this.keys().then(function(cacheNames) {
+      var match;
+
+      return cacheNames.reduce(function(chain, cacheName) {
+        return chain.then(function() {
+          return match || caches.open(cacheName).then(function(cache) {
+            return cache.match(request, opts);
+          }).then(function(response) {
+            match = response;
+            return match;
+          });
+        });
+      }, Promise.resolve());
+    });
+  };
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 let CACHENAME = 'Le Tilt ASBL';
 var dataCacheName = 'Tilt';
 var urlsToCache = [
@@ -192,7 +277,7 @@ var urlsToCache = [
         './vendor/verot/class.upload.php/test/watermark.png',
         './vendor/verot/class.upload.php/test/watermark_large.png'
       ];
-
+/*
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
   e.waitUntil(
@@ -235,4 +320,195 @@ self.addEventListener('fetch', function(e) {
       })
     );
   }
+});*/
+
+self.addEventListener('install', (event) => {
+  console.info('Event: Install');
+
+  event.waitUntil(
+    caches.open(CACHENAME)
+    .then((cache) => {
+      //[] of files to cache & if any of the file not present `addAll` will fail
+      return cache.addAll(urlsToCache)
+      .then(() => {
+        console.info('All files are cached');
+        return self.skipWaiting(); //To forces the waiting service worker to become the active service worker
+      })
+      .catch((error) =>  {
+        console.error('Failed to cache', error);
+      })
+    })
+  );
+});
+
+/*
+  FETCH EVENT: triggered for every request made by index page, after install.
+*/
+
+//Adding `fetch` event listener
+self.addEventListener('fetch', (event) => {
+  console.info('Event: Fetch');
+
+  var request = event.request;
+
+  //Tell the browser to wait for newtwork request and respond with below
+  event.respondWith(
+    //If request is already in cache, return it
+    caches.match(request).then((response) => {
+      if (response) {
+        return response;
+      }
+
+      // // Checking for navigation preload response
+      // if (event.preloadResponse) {
+      //   console.info('Using navigation preload');
+      //   return response;
+      // }
+
+      //if request is not cached or navigation preload response, add it to cache
+      return fetch(request).then((response) => {
+        var responseToCache = response.clone();
+        caches.open(CACHENAME).then((cache) => {
+            cache.put(request, responseToCache).catch((err) => {
+              console.warn(request.url + ': ' + err.message);
+            });
+          });
+
+        return response;
+      });
+    })
+  );
+});
+
+/*
+  ACTIVATE EVENT: triggered once after registering, also used to clean up caches.
+*/
+
+//Adding `activate` event listener
+self.addEventListener('activate', (event) => {
+  console.info('Event: Activate');
+
+  //Navigation preload is help us make parallel request while service worker is booting up.
+  //Enable - chrome://flags/#enable-service-worker-navigation-preload
+  //Support - Chrome 57 beta (behing the flag)
+  //More info - https://developers.google.com/web/updates/2017/02/navigation-preload#the-problem
+
+  // Check if navigationPreload is supported or not
+  // if (self.registration.navigationPreload) { 
+  //   self.registration.navigationPreload.enable();
+  // }
+  // else if (!self.registration.navigationPreload) { 
+  //   console.info('Your browser does not support navigation preload.');
+  // }
+
+  //Remove old and unwanted caches
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cache) => {
+          if (cache !== CACHENAME) {
+            return caches.delete(cache); //Deleting the old cache (cache v1)
+          }
+        })
+      );
+    })
+    .then(function () {
+      console.info("Old caches are cleared!");
+      // To tell the service worker to activate current one 
+      // instead of waiting for the old one to finish.
+      return self.clients.claim(); 
+    }) 
+  );
+});
+
+/*
+  PUSH EVENT: triggered everytime, when a push notification is received.
+*/
+
+//Adding `push` event listener
+self.addEventListener('push', (event) => {
+  console.info('Event: Push');
+
+  var title = 'Push notification demo';
+  var body = {
+    'body': 'click to return to application',
+    'tag': 'demo',
+    'icon': './images/icons/apple-touch-icon.png',
+    'badge': './images/icons/apple-touch-icon.png',
+    //Custom actions buttons
+    'actions': [
+      { 'action': 'yes', 'title': 'I ♥ this app!'},
+      { 'action': 'no', 'title': 'I don\'t like this app'}
+    ]
+  };
+
+  event.waitUntil(self.registration.showNotification(title, body));
+});
+
+/*
+  BACKGROUND SYNC EVENT: triggers after `bg sync` registration and page has network connection.
+  It will try and fetch github username, if its fulfills then sync is complete. If it fails,
+  another sync is scheduled to retry (will will also waits for network connection)
+*/
+
+self.addEventListener('sync', (event) => {
+  console.info('Event: Sync');
+
+  //Check registered sync name or emulated sync from devTools
+  if (event.tag === 'github' || event.tag === 'test-tag-from-devtools') {
+    event.waitUntil(
+      //To check all opened tabs and send postMessage to those tabs
+      self.clients.matchAll().then((all) => {
+        return all.map((client) => {
+          return client.postMessage('online'); //To make fetch request, check app.js - line no: 122
+        })
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+    );
+  }
+});
+
+/*
+  NOTIFICATION EVENT: triggered when user click the notification.
+*/
+
+//Adding `notification` click event listener
+self.addEventListener('notificationclick', (event) => {
+  var url = 'https://demopwa.in/';
+
+  //Listen to custom action buttons in push notification
+  if (event.action === 'yes') {
+    console.log('I ♥ this app!');
+  }
+  else if (event.action === 'no') {
+    console.warn('I don\'t like this app');
+  }
+
+  event.notification.close(); //Close the notification
+
+  //To open the app after clicking notification
+  event.waitUntil(
+    clients.matchAll({
+      type: 'window'
+    })
+    .then((clients) => {
+      for (var i = 0; i < clients.length; i++) {
+        var client = clients[i];
+        //If site is opened, focus to the site
+        if (client.url === url && 'focus' in client) {
+          return client.focus();
+        }
+      }
+
+      //If site is cannot be opened, open in new window
+      if (clients.openWindow) {
+        return clients.openWindow('/');
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    })
+  );
 });
