@@ -24,7 +24,7 @@
     $nom="";$prenom="";$email="";$message="";
     // $id="";$password="";
     $errorNom=""; $errorPrenom=""; $errorEmail=""; $errorMessage="";
-    // $errorUpload="";$errorEmailUser="";$errorPassword="";
+     $errorUpload="";//$errorEmailUser="";$errorPassword="";
     $checkNom=""; $checkPrenom="";$checkEmail="";$checkMessage="";
     if(isset($_POST['envoie'])){
         $formatUpload = explode('/', $_FILES['upload']['type']);
