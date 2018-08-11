@@ -1,6 +1,6 @@
 let CACHENAME = 'Le Tilt ASBL';
 var dataCacheName = 'Tilt';
-var urlsToCache = [
+var urlsToCache = [/*
         './README.md',
         './assets/css/carousel.css',
         './assets/css/cookieconsent.min.css',
@@ -190,7 +190,7 @@ var urlsToCache = [
         './vendor/verot/class.upload.php/test/test.png',
         './vendor/verot/class.upload.php/test/upload.php',
         './vendor/verot/class.upload.php/test/watermark.png',
-        './vendor/verot/class.upload.php/test/watermark_large.png'
+        './vendor/verot/class.upload.php/test/watermark_large.png'*/
       ];
 
 self.addEventListener('install', function(e) {
