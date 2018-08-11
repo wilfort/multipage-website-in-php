@@ -10,6 +10,7 @@
 //    });
 //   }
   if ('serviceWorker' in navigator) {
+    console.log(navigator);
     navigator.serviceWorker
              .register('service-worker.js')
              .then(function() { console.log('Service Worker Registered'); });
