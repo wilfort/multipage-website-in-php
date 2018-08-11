@@ -11,6 +11,6 @@
 //   }
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-             .register('/app/service-worker.js')
+             .register('multipage-website-letilt/service-worker.js')
              .then(function() { console.log('Service Worker Registered'); });
   }
