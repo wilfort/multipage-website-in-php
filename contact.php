@@ -2,12 +2,6 @@
      //uncomment for Steaphane's version of phpmailer
     include ("assets/vue/traitement-mail.php");
      //uncomment for version of mailer +upload by Son
-<<<<<<< HEAD
-     include ("assets/php/mailer.php");
-     //include ("assets/php/upload.php");
-    
-=======
->>>>>>> stephane
     
     // include ("/assets/php/mailer.php");
     // include ("/assets/php/upload.php");
