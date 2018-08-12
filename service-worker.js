@@ -60,7 +60,7 @@ var urlsToCache = [
         './assets/vue/link.php',
         './assets/vue/logActiviter.php',
         './assets/vue/mail.php',
-        './assets/vue/traitement-mail.php',
+        // './assets/vue/traitement-mail.php',
         // './composer.json',
         // './composer.lock',
         './contact.php',
