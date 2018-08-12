@@ -4,13 +4,13 @@ require __DIR__.'/../../vendor/verot/class.upload.php/src/class.upload.php';
 //require './vendor/verot/class.upload.php/src/class.upload.php';
 
 function uploader (){
-    echo 'upload scipt loaded';
+    echo 'upload script loaded';
     $today= date('d/m/Y H:i:s');
     $handle = new upload($_FILES['upload']);
     if ($handle->uploaded){
         echo 'upload running';
         
-        if ($handle->file_src_name_ext!='bmp' && $handle->file_is_image=='true'){
+        if ($handle->file_src_name_ext=='png' || $handle->file_src_name_ext=='gif' || $handle->file_src_name_ext=='jpg' || $handle->file_src_name_ext=='jpeg' ){
             $handle->process('./assets/uploads/');
            
             if ($handle->processed){
