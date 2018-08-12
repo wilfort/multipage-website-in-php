@@ -19,7 +19,7 @@ $errorNom=""; $errorPrenom=""; $errorEmail=""; $errorMessage="";$errorUpload="";
 //global $attachment;
 
 //Feedback to client
-$feedback="Bonjour, \n".' Vous nous avez contactés ce '.$date_jour.' à '.$date_heure."</br> Veuillez trouver ci-dessous votre message ainsi que les éventuelles pièces jointes.</br> Bien à vous,</br> L'équipe du TILT </br>";
+$feedback="<p>Bonjour, </br>".' Vous nous avez contactés ce '.$date_jour.' à '.$date_heure."</br> Veuillez trouver ci-dessous votre message ainsi que les éventuelles pièces jointes.</br> Bien à vous,</br> L'équipe du TILT </br></p>";
 
 //Sanitize
 $san_nom=filter_var($nom_raw,FILTER_SANITIZE_STRING);
