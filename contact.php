@@ -3,7 +3,7 @@
      //include("assets/vue/traitement-mail.php");
      //uncomment for version of mailer +upload by Son
      include ("assets/php/mailer.php");
-     //include ("assets/php/upload.php");
+     include ("assets/php/upload.php");
     
     
 

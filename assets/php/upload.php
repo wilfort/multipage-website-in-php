@@ -1,7 +1,7 @@
 <?php
 
-//require __DIR__.'/../../vendor/verot/class.upload.php/src/class.upload.php';
-require './vendor/verot/class.upload.php/src/class.upload.php';
+require __DIR__.'/../../vendor/verot/class.upload.php/src/class.upload.php';
+//require './vendor/verot/class.upload.php/src/class.upload.php';
 
 function uploader (){
     echo 'upload scipt loaded';
