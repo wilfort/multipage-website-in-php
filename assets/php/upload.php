@@ -4,6 +4,7 @@
 require './vendor/verot/class.upload.php/src/class.upload.php';
 
 function uploader (){
+    echo 'upload scipt loaded';
     $today= date('d/m/Y H:i:s');
     $handle = new upload($_FILES['upload']);
     if ($handle->uploaded){
