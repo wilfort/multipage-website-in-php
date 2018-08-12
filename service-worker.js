@@ -58,7 +58,7 @@ var urlsToCache = [
         './assets/vue/footer.php',
         './assets/vue/header.php',
         './assets/vue/link.php',
-        // './assets/vue/logActiviter.php',
+        './assets/vue/logActiviter.php',
         // './assets/vue/mail.php',
         // './assets/vue/traitement-mail.php',
         // './composer.json',
