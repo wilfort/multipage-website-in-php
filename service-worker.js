@@ -193,46 +193,109 @@ var urlsToCache = [
         './vendor/verot/class.upload.php/test/watermark_large.png'
       ];
 
-self.addEventListener('install', function(e) {
-  console.log('[ServiceWorker] Install');
-  e.waitUntil(
-    caches.open(CACHENAME).then(function(cache) {
-      console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(urlsToCache);
+// self.addEventListener('install', function(e) {
+//   console.log('[ServiceWorker] Install');
+//   e.waitUntil(
+//     caches.open(CACHENAME).then(function(cache) {
+//       console.log('[ServiceWorker] Caching app shell');
+//       return cache.addAll(urlsToCache);
+//     })
+//   );
+// });
+self.addEventListener('install', function (event) {
+  console.log('Event: Install');
+  
+  // waitUntil method extends the lifetime of an event
+   event.waitUntil(
+    //Open the cache
+    caches.open(CACHENAME)
+      .then(function (cache) {
+        //Adding the files to cache
+        return cache.addAll(urlsToCache)
+          .then(function () {
+            console.log("All files are cached.");
+          })
+      })
+      .catch(function (err) {
+        console.log("Error occurred while caching ", err);
+      })
+  );
+});
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// self.addEventListener('activate', function(e) {
+//   console.log('[ServiceWorker] Activate');
+//   e.waitUntil(
+//     caches.keys().then(function(keyList) {
+//       return Promise.all(keyList.map(function(key) {
+//         if (key !== CACHENAME && key !== dataCacheName) {
+//           console.log('[ServiceWorker] Removing old cache', key);
+//           return caches.delete(key);
+//         }
+//       }));
+//     })
+//   );
+//   return self.clients.claim();
+// });
+self.addEventListener('activate', function (event) {
+  console.log('Event: Activate');
+  
+  //Delete unwanted and old caches here
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cache) {
+          if (cache !== CACHENAME && cache !== dataCacheName) {
+            console.log('[ServiceWorker] Removing old cache', cache);
+            return caches.delete(cache); //Deleting the cache
+          }
+        })
+      );
     })
   );
 });
-self.addEventListener('activate', function(e) {
-  console.log('[ServiceWorker] Activate');
-  e.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (key !== CACHENAME && key !== dataCacheName) {
-          console.log('[ServiceWorker] Removing old cache', key);
-          return caches.delete(key);
-        }
-      }));
+///////////////////////////////////////////////
+// self.addEventListener('fetch', function(e) {
+//   console.log('[Service Worker] Fetch', e.request.url);
+//   var dataUrl = 'https://query.yahooapis.com/v1/public/yql';
+//   if (e.request.url.indexOf(dataUrl) > -1) {
+//     e.respondWith(
+//       caches.open(dataCacheName).then(function(cache) {
+//         return fetch(e.request).then(function(response){
+//           cache.put(e.request.url, response.clone());
+//           return response;
+//         });
+//       })
+//     );
+//   } else {
+//     e.respondWith(
+//       caches.match(e.request).then(function(response) {
+//         return response || fetch(e.request);
+//       })
+//     );
+//   }
+// });
+self.addEventListener('fetch', function (event) {
+  console.log('Event: Fetch', event.request.url);
+
+  var request = event.request; // request made by the app
+
+  //Tell the browser to wait for network request and respond with below
+  event.respondWith(
+    //If request is already in cache, return its response
+    caches.match(request).then(function(response) {
+      if (response) {
+        return response;
+      }
+
+      //else make a request and add it to cache and return the response
+      return fetch(request).then(function(response) {
+        var responseToCache = response.clone(); //Cloning the response stream in order to add it to cache
+        caches.open(CACHENAME).then(function(cache) {
+            cache.put(request, responseToCache); //Adding to cache
+          });
+
+        return response;
+      });
     })
   );
-  return self.clients.claim();
-}); 
-self.addEventListener('fetch', function(e) {
-  console.log('[Service Worker] Fetch', e.request.url);
-  var dataUrl = 'https://query.yahooapis.com/v1/public/yql';
-  if (e.request.url.indexOf(dataUrl) > -1) {
-    e.respondWith(
-      caches.open(dataCacheName).then(function(cache) {
-        return fetch(e.request).then(function(response){
-          cache.put(e.request.url, response.clone());
-          return response;
-        });
-      })
-    );
-  } else {
-    e.respondWith(
-      caches.match(e.request).then(function(response) {
-        return response || fetch(e.request);
-      })
-    );
-  }
 });
