@@ -1,5 +1,5 @@
 <?php
-require __DIR__.'/upload.php';
+//require __DIR__.'/upload.php';
 
 //get data from form
 $genre=$_POST["genre"];
