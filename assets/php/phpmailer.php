@@ -43,7 +43,7 @@ if ($format="HTML"){
 };
 
 //message body
-$mail->Body=$feedback."\n".$san_message;
+$mail->Body=$feedback."</br>".$san_message;
 
 //Attach an image file
 if (empty($attachment)==false){

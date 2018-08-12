@@ -1,5 +1,5 @@
 <?php
-//require __DIR__.'/upload.php';
+require __DIR__.'/upload.php';
 
 //get data from form
 $genre=$_POST["genre"];
@@ -16,7 +16,7 @@ $date_heure=date('H:i:s');
 $errorNom=""; $errorPrenom=""; $errorEmail=""; $errorMessage="";$errorUpload="";
 
 //stock attachment name from upload.php
-$attachment;
+//global $attachment;
 
 //Feedback to client
 $feedback="Bonjour, \n".' Vous nous avez contactés ce '.$date_jour.' à '.$date_heure."\n Veuillez trouver ci-dessous votre message ainsi que les éventuelles pièces jointes.\n Bien à vous,\n L'équipe du TILT\n";
