@@ -56,7 +56,8 @@ We were given half a day to meet-up, figure out how to share the various tasks a
     * Deployement on Heroku: Stéphane
 
 Communication would be through Ryver.
-NB: The email and upload might be done separately by both (then merged or modified) as part of the learning process.
+NB: The email and upload have be done separately by both (then merged or modified) as part of the learning process.
+Stéphane's version is on master and has been deployed, Quang's version is on the branch "Son".
 
 5. The client 
 
@@ -68,6 +69,20 @@ Their [current website](https://www.letilt.be/) is well structured for people wh
 29/07: split tasks. Stéphane started working on phpmailer, Quang on file upload
 30/07: 14:00: upload is complete but the permission issues encountered seem to come up when Stéphane tests it on his end.
 30/07, 15:30: both mailer and upload are complete. Stéphane starts working on header, Quang starts writing the README and combing through the website's content
+02/08 until 06/08: both of us were unavailable due to our participation to [Hack in the woods](http://www.hackinthewoods.be/)
+07 and 08/08: Quang was absent for family reasons, Stéphane worked on the CSS
+09/08: Stéphane finalized the CSS and started the service worker. Quang was not available because his involvement in the [Dorothy project](https://dorothycares.ovh/login/)
+10/08: Stephane finished the PWA settings, Quang managed the GDPR part (cookie banner, opt-in to data collection in the form, pictures' credits). Deployment on Heroku was managed in tandem.
+
+7. Elements of self-evaluation
+
+- Since we both attended the hackathon, we prioritized the php part of the challenge. We both managed to have a working version of the email and upload by 01/08/2018.
+
+- All the front end was relegated at the back seat, then managed mostly by Stéphane due to Quang's (planned) absences. Practically, the results match most technical requirements (use of css framework, include animation,min 3 pages), but the UX and branding have not been developed as we'd have liked to.
+
+- Developing 2 versions of the mailer and upload was interesting, but time consuming in an already short deadline. It also made some of the task splitting quite moot.
+
+- We tried to stick to remote working as much as possible, but in the last days we prioritized reaching technical goals over that part of the challenge.
 
 
 
