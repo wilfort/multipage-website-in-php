@@ -1,5 +1,5 @@
 <?php 
-    $fileLogPresent="";
+    /*$fileLogPresent="";
     $phpLog="";
     if(file_exists ( './assets/vue/log.php' )===false){
         $fileLogPresent="NON";
@@ -18,12 +18,13 @@
                 <?=$errorPassword?>
                 </div>';
     }
-    else{$fileLogPresent="OUI";}
+    else{$fileLogPresent="OUI";}*/
     
     // echo $fileLogPresent;
-    $nom="";$prenom="";$email="";$message="";$id="";$password="";
+    $nom="";$prenom="";$email="";$message="";
+    // $id="";$password="";
     $errorNom=""; $errorPrenom=""; $errorEmail=""; $errorMessage="";
-    $errorUpload="";$errorEmailUser="";$errorPassword="";
+     $errorUpload="";//$errorEmailUser="";$errorPassword="";
     $checkNom=""; $checkPrenom="";$checkEmail="";$checkMessage="";
     if(isset($_POST['envoie'])){
         $formatUpload = explode('/', $_FILES['upload']['type']);
@@ -51,8 +52,8 @@
         //  echo $message."<br>";
         $checkMessage = $message;
         $photo = $_FILES['upload']['name'];
-        $type = $_POST['type'];
-        // echo $type;
+        $format = $_POST['type'];
+        // echo $format;
         // 2. Validation
         // Prints int(1).
         if (
@@ -78,36 +79,36 @@
         $errorMessage="<span class='erreur'>Ce message est invalide.</span>";
         }
         
-        if (($formatUpload[1]!="jpg")and($formatUpload[1]!="jpeg")and($formatUpload[1]!="png")and($formatUpload[1]!="gif")) {
-            $errors['format'] =  "Ce format pour l'upload est invalide.";
-            $errorUpload="<span class='erreur'>Ce format pour l'upload est invalide.</span>";
-        }
+        // if (($formatUpload[1]!="jpg")and($formatUpload[1]!="jpeg")and($formatUpload[1]!="png")and($formatUpload[1]!="gif")) {
+        //     $errors['format'] =  "Ce format pour l'upload est invalide.";
+        //     $errorUpload="<span class='erreur'>Ce format pour l'upload est invalide.</span>";
+        // }
 
-        if($type=='HTML'){
+        if($format=='HTML'){
             $fichierTXT="non";
             $donnerMessage="<p>".$genre." ".$nom." ".$prenom.",<br><br>je vous envoie à l'adresse suivant ".
             $email.",<br>le but de se message ".$objet.",<br>sur ".$message.",<br>et en piece jointe une photo.</p>";
-        }else if($type=='Texte'){
+        }else if($format=='Texte'){
             $fichierTXT="oui";
             $donnerMessage="".$genre." ".$nom." ".$prenom."je vous envoie à l'adresse suivant ".$email.",le but de se message ".$objet.",sur ".$message.",et en piece jointe une photo.";$handle = @fopen("./assets/message.txt", "w");
             fwrite($handle, $donnerMessage);
             fclose($handle);
         }
 
-        if ($fileLogPresent=="NON"){
+        /*if ($fileLogPresent=="NON"){
             $id = filter_var($_POST['user'], FILTER_SANITIZE_EMAIL);
             if ((false === filter_var($id, FILTER_VALIDATE_EMAIL)) OR (empty($id)==true)) {
                 $errors['emailUser'] =  "Cette adresse est invalide.";
                 $errorEmailUser="<span class='erreur'>Cette adresse est invalide.</span>";
             }
-            $password = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
-            if  (empty($password)==true) {
+            $adminPWD = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
+            if  (empty($adminPWD)==true) {
                 $errors['password'] =  "Ce password est invalide.";
                 $errorPassword="<span class='erreur'>Ce password est invalide.</span>";
                 }
 
 
-        }else{include('./assets/vue/log.php');}
+        }else{include('./assets/vue/log.php');}*/
         // 3. Exécution
         if (count($errors)=== 0){
             include("./assets/php/upload.php");
@@ -120,3 +121,4 @@
         
     
     }
+?>

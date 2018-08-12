@@ -1,11 +1,16 @@
 <?php
      //uncomment for Steaphane's version of phpmailer
-     //include("assets/vue/traitement-mail.php");
+    include ("assets/vue/traitement-mail.php");
      //uncomment for version of mailer +upload by Son
+<<<<<<< HEAD
      include ("assets/php/mailer.php");
      //include ("assets/php/upload.php");
     
+=======
+>>>>>>> stephane
     
+    // include ("/assets/php/mailer.php");
+    // include ("/assets/php/upload.php");
 
 ?>
 <!DOCTYPE html>
@@ -19,23 +24,7 @@
     <?php 
         include("./assets/vue/link.php")
     ?>
-    <link rel="stylesheet" type="text/css" href="assets/css/cookieconsent.min.css" />
-    <script src="assets/js/cookieconsent.min.js"></script>
-    <script>
-    window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-    "palette": {
-        "popup": {
-        "background": "#000"
-        },
-        "button": {
-        "background": "transparent",
-        "text": "#f1d600",
-        "border": "#f1d600"
-        }
-    }
-    })});
-</script>
+
 </head>
 <body>
     <?php
@@ -98,7 +87,7 @@
             </div>
             <div class="col-sm-12 col-md-6 col-lg-8 my-auto text-center">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5053.407655914593!2d4.528792028076819!3d50.70688041804618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x47c3d6f834458dd5%3A0x10b4ce8e5925fcc9!2sChemin+du+Meunier+44%2C+1330+Rixensart!3m2!1d50.7068805!2d4.5331694!5e0!3m2!1sfr!2sbe!4v1533130870562" 
-                width="400" height="300" frameborder="0" style="border:0" allowfullscreen title="plan"></iframe>
+                width="300" height="280" frameborder="0" style="border:0" allowfullscreen title="plan"></iframe>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <p>Vous pouvez envoyer un mail qui nous informera préalablement de votre souhait et nous essayons dans la mesure du possible d’y donner une bonne suite.</p>
@@ -123,7 +112,7 @@
             <div class="col-12">
                 <form action="#" method="post" enctype="multipart/form-data">
                     <div class="row">
-                        <?=$phpLog?>
+                        <!-- <?=$phpLog?> -->
 
                         <div class="col-md-12 col-lg-4">
                             <label for="genre">titre</label>
@@ -199,8 +188,8 @@
                         </div>
                         <div class="col-8">
                             <label for="privacy">Afin de répondre à votre requête, nous avons besoin de stocker votre adresse de messagerie ainsi que les messages et pièces jointes que vous nous envoyez. Ces données ne seront en aucun cas communiquées à des tiers ou utilisées à des fins de marketing. Acceptez-vous le stockage de ces données par le site?</label>
-                            <input type="radio" name="privacy" value="yes" id="yes">oui</input>
-                            <input type="radio" name="privacy" value="no" id ="no">non</input>
+                            <input type="radio" name="privacy" value="yes" id="yes"></input> <label for="yes">oui</label>
+                            <input type="radio" name="privacy" value="no" id ="no"></input> <label for="no">non</label>
                             
                         </div>
                         <div class="col-12">

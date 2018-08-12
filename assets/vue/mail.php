@@ -15,14 +15,14 @@
     require './vendor/autoload.php';
     $mail = new PHPMailer;
         
-        $mail->SMTPDebug = 2;
+        //$mail->SMTPDebug = 2;
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
         //Username to use for SMTP authentication - use full email address for gmail
-        $mail->Username = getenv("user_mail");//$adminUser;
+        $mail->Username = getenv("user_mail");//$id;
         //Password to use for SMTP authentication
         $mail->Password = getenv("user_password");//$adminPWD;
         $mail->setFrom('dev.test.becode@gmail.com', 'Tilt asbl');
@@ -34,9 +34,11 @@
         if($fichierTXT=="oui"){
             $mail->addAttachment('./assets/message.txt');  
         }
-        $mail->addAttachment('./assets/uploads/'.$photo, $photo);
-
-        $mail->isHTML(true);
+        //echo $photo;
+        $mail->addAttachment('./assets/uploads/'.$attachment, $attachment);
+        // text or html 
+        if ($format == "HTML"){ $mail->isHTML(true); }else{ $mail->isHTML(false); };
+        //$mail->isHTML(true);
         $mail->Body = $donnerMessage;
         
         if (!$mail->send()) {
@@ -59,4 +61,4 @@
         imap_close($imapStream);
         return $result;
     }
-    
+?>
