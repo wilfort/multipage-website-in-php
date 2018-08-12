@@ -74,7 +74,7 @@ var urlsToCache = [
         // './log.txt',
         // './manifest.json',
         './prof.php',
-        './vendor/autoload.php'//,
+        //'./vendor/autoload.php'//,
         // './vendor/composer/ClassLoader.php',
         // './vendor/composer/autoload_classmap.php',
         // './vendor/composer/autoload_namespaces.php',
