@@ -60,4 +60,4 @@
         imap_close($imapStream);
         return $result;
     }
-    
+    ?>
