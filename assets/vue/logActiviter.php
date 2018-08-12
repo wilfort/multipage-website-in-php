@@ -43,7 +43,7 @@ if ($handle) {
 ';
     $contenu .="Message : ".$message.'
 ';
-    $contenu .="Format : ".$type.'
+    $contenu .="Format : ".$format.'
 
 ';
 

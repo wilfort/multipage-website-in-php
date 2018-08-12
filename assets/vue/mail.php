@@ -36,8 +36,9 @@
         }
         //echo $photo;
         $mail->addAttachment('./assets/uploads/'.$attachment, $attachment);
-
-        $mail->isHTML(true);
+        // text or html 
+        if ($format == "HTML"){ $mail->isHTML(true); }else{ $mail->isHTML(false); };
+        //$mail->isHTML(true);
         $mail->Body = $donnerMessage;
         
         if (!$mail->send()) {

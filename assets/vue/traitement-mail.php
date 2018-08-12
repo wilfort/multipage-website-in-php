@@ -52,8 +52,8 @@
         //  echo $message."<br>";
         $checkMessage = $message;
         $photo = $_FILES['upload']['name'];
-        $type = $_POST['type'];
-        // echo $type;
+        $format = $_POST['type'];
+        // echo $format;
         // 2. Validation
         // Prints int(1).
         if (
@@ -84,11 +84,11 @@
         //     $errorUpload="<span class='erreur'>Ce format pour l'upload est invalide.</span>";
         // }
 
-        if($type=='HTML'){
+        if($format=='HTML'){
             $fichierTXT="non";
             $donnerMessage="<p>".$genre." ".$nom." ".$prenom.",<br><br>je vous envoie à l'adresse suivant ".
             $email.",<br>le but de se message ".$objet.",<br>sur ".$message.",<br>et en piece jointe une photo.</p>";
-        }else if($type=='Texte'){
+        }else if($format=='Texte'){
             $fichierTXT="oui";
             $donnerMessage="".$genre." ".$nom." ".$prenom."je vous envoie à l'adresse suivant ".$email.",le but de se message ".$objet.",sur ".$message.",et en piece jointe une photo.";$handle = @fopen("./assets/message.txt", "w");
             fwrite($handle, $donnerMessage);
