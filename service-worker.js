@@ -53,7 +53,7 @@ var urlsToCache = [
         './assets/php/admin-form.php',
         // './assets/php/mailer.php',
         // './assets/php/phpmailer.php',
-        // './assets/php/sanitizer.php',
+        './assets/php/sanitizer.php',
         //'./assets/php/upload.php',
         './assets/vue/footer.php',
         './assets/vue/header.php',
