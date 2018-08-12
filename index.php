@@ -6,7 +6,7 @@
     <meta name="Description" content="Put your description here.">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Le Tilt</title>
-
+    <link rel="canonical" href="https://multipage-website-letilt.herokuapp.com/index.php" />
     <?php 
         include("./assets/vue/link.php")
     ?>
