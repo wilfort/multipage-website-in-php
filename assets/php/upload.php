@@ -4,17 +4,17 @@ require __DIR__.'/../../vendor/verot/class.upload.php/src/class.upload.php';
 //require './vendor/verot/class.upload.php/src/class.upload.php';
 
 function uploader (){
-    echo 'upload script loaded';
+   // echo 'upload script loaded';
     $today= date('d/m/Y H:i:s');
     $handle = new upload($_FILES['upload']);
     if ($handle->uploaded){
-        echo 'upload running';
+        //echo 'upload running';
         
         if ($handle->file_src_name_ext=='png' || $handle->file_src_name_ext=='gif' || $handle->file_src_name_ext=='jpg' || $handle->file_src_name_ext=='jpeg' ){
             $handle->process('./assets/uploads/');
            
             if ($handle->processed){
-                echo 'image uploaded';
+               // echo 'image uploaded';
                 file_put_contents('./assets/logUploads.txt',$today.' upload de '.$handle->file_src_name.' vers '.$handle->file_dst_name."\n",FILE_APPEND);
                 global $attachment;
                 $attachment = $handle->file_dst_name;
